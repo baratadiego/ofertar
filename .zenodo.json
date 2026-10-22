@@ -1,0 +1,27 @@
+{
+  "title": "Ofertar: organizador de ofertas de disciplinas para coordenações de curso",
+  "upload_type": "software",
+  "description": "<p>Aplicação web, instalável e de uso offline, que apoia coordenações de curso de graduação na organização da oferta semestral de disciplinas: montagem da grade de horários por turma, distribuição e conferência da carga horária docente, verificação automática de choques de horário e de aderência à matriz curricular, controle de versões da oferta e geração de documentos (Word) para discentes, docentes, departamento e outros colegiados.</p><p>Os dados permanecem no computador do usuário (navegador e arquivo de projeto), sem servidor. Desenvolvida no Laboratório Multidisciplinar de Ensino (LAMEN) da Universidade Federal do Amapá (UNIFAP). Inclui manual de uso com telas.</p>",
+  "creators": [
+    {
+      "name": "Barata, Francisco Diego Barros",
+      "affiliation": "Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá (UNIFAP)"
+    }
+  ],
+  "license": "MIT",
+  "language": "por",
+  "keywords": [
+    "gestão acadêmica",
+    "oferta de disciplinas",
+    "coordenação de curso",
+    "grade de horários",
+    "carga horária docente",
+    "matriz curricular",
+    "ensino superior",
+    "software educacional"
+  ],
+  "related_identifiers": [
+    { "identifier": "https://ofertar.vercel.app", "relation": "isDocumentedBy", "resource_type": "software" }
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,1377 @@
+{
+ "formato": "ofertas-curso/1",
+ "config": {
+  "instituicao": "Universidade Exemplo",
+  "curso": "Ciências Naturais",
+  "sigla": "CNAT",
+  "habilitacoes": [
+   {
+    "id": "BACH",
+    "nome": "Bacharelado",
+    "abrev": "Bach.",
+    "coordenador": "Ana Paula Moreira (exemplo)"
+   },
+   {
+    "id": "LIC",
+    "nome": "Licenciatura",
+    "abrev": "Lic.",
+    "coordenador": "Carlos Henrique Lima (exemplo)"
+   }
+  ],
+  "niveis": 8,
+  "chPorAulaSemanal": 15,
+  "dias": [
+   "2ª feira",
+   "3ª feira",
+   "4ª feira",
+   "5ª feira",
+   "6ª feira",
+   "Sábado"
+  ],
+  "turnos": [
+   {
+    "id": "M",
+    "nome": "Manhã",
+    "slots": [
+     {
+      "id": "M1",
+      "inicio": "07:30",
+      "fim": "08:20"
+     },
+     {
+      "id": "M2",
+      "inicio": "08:20",
+      "fim": "09:10"
+     },
+     {
+      "id": "M3",
+      "inicio": "09:10",
+      "fim": "10:00"
+     },
+     {
+      "id": "M4",
+      "inicio": "10:20",
+      "fim": "11:10"
+     },
+     {
+      "id": "M5",
+      "inicio": "11:10",
+      "fim": "12:00"
+     },
+     {
+      "id": "M6",
+      "inicio": "12:00",
+      "fim": "12:50"
+     }
+    ]
+   },
+   {
+    "id": "T",
+    "nome": "Tarde",
+    "slots": [
+     {
+      "id": "T1",
+      "inicio": "13:30",
+      "fim": "14:20"
+     },
+     {
+      "id": "T2",
+      "inicio": "14:20",
+      "fim": "15:10"
+     },
+     {
+      "id": "T3",
+      "inicio": "15:10",
+      "fim": "16:00"
+     },
+     {
+      "id": "T4",
+      "inicio": "16:20",
+      "fim": "17:10"
+     },
+     {
+      "id": "T5",
+      "inicio": "17:10",
+      "fim": "18:00"
+     },
+     {
+      "id": "T6",
+      "inicio": "18:00",
+      "fim": "18:50"
+     }
+    ]
+   },
+   {
+    "id": "N",
+    "nome": "Noite",
+    "slots": [
+     {
+      "id": "N1",
+      "inicio": "18:10",
+      "fim": "19:00"
+     },
+     {
+      "id": "N2",
+      "inicio": "19:00",
+      "fim": "19:50"
+     },
+     {
+      "id": "N3",
+      "inicio": "19:50",
+      "fim": "20:40"
+     },
+     {
+      "id": "N4",
+      "inicio": "21:00",
+      "fim": "21:50"
+     },
+     {
+      "id": "N5",
+      "inicio": "21:50",
+      "fim": "22:40"
+     }
+    ]
+   }
+  ],
+  "matrizes": [
+   {
+    "id": "BACH-2020",
+    "habilitacao": "BACH",
+    "nome": "Bacharelado – currículo 2020",
+    "ingressoDe": 2020,
+    "ingressoAte": 9999,
+    "componentes": [
+     {
+      "codigo": "EXB100",
+      "nome": "Biologia Celular",
+      "ch": 60,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB101",
+      "nome": "Leitura e Produção de Textos",
+      "ch": 30,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB102",
+      "nome": "Matemática Aplicada",
+      "ch": 60,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB103",
+      "nome": "Química Geral",
+      "ch": 60,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB204",
+      "nome": "Bioestatística",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB205",
+      "nome": "Física Geral",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB206",
+      "nome": "Histologia",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB207",
+      "nome": "Química Orgânica",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB308",
+      "nome": "Bioquímica",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB309",
+      "nome": "Genética",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB310",
+      "nome": "Morfologia Vegetal",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB311",
+      "nome": "Zoologia I",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB412",
+      "nome": "Biotecnologia",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB413",
+      "nome": "Ecologia Geral",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB414",
+      "nome": "Fisiologia Vegetal",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB415",
+      "nome": "Microbiologia",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB416",
+      "nome": "Zoologia II",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB517",
+      "nome": "Estágio de Pesquisa I",
+      "ch": 120,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB518",
+      "nome": "Evolução",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB519",
+      "nome": "Fisiologia Animal",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB520",
+      "nome": "Parasitologia",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB621",
+      "nome": "Biogeografia",
+      "ch": 60,
+      "nivel": 6,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB622",
+      "nome": "Gestão Ambiental",
+      "ch": 60,
+      "nivel": 6,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB623",
+      "nome": "Paleontologia",
+      "ch": 60,
+      "nivel": 6,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB724",
+      "nome": "Estágio de Pesquisa II",
+      "ch": 120,
+      "nivel": 7,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB725",
+      "nome": "Trabalho de Conclusão de Curso I",
+      "ch": 30,
+      "nivel": 7,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB826",
+      "nome": "Ecologia de Campo",
+      "ch": 60,
+      "nivel": 8,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB827",
+      "nome": "Trabalho de Conclusão de Curso II",
+      "ch": 30,
+      "nivel": 8,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXB900",
+      "nome": "Tópicos Especiais (optativa)",
+      "ch": 60,
+      "nivel": 0,
+      "natureza": "optativa"
+     }
+    ]
+   },
+   {
+    "id": "LIC-2020",
+    "habilitacao": "LIC",
+    "nome": "Licenciatura – currículo 2020",
+    "ingressoDe": 2020,
+    "ingressoAte": 9999,
+    "componentes": [
+     {
+      "codigo": "EXL100",
+      "nome": "Biologia Celular",
+      "ch": 60,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL101",
+      "nome": "Leitura e Produção de Textos",
+      "ch": 30,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL102",
+      "nome": "Matemática Aplicada",
+      "ch": 60,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL103",
+      "nome": "Química Geral",
+      "ch": 60,
+      "nivel": 1,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL204",
+      "nome": "Bioestatística",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL205",
+      "nome": "Didática Geral",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL206",
+      "nome": "Física Geral",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL207",
+      "nome": "Histologia",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL208",
+      "nome": "Química Orgânica",
+      "ch": 60,
+      "nivel": 2,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL309",
+      "nome": "Bioquímica",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL310",
+      "nome": "Genética",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL311",
+      "nome": "Morfologia Vegetal",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL312",
+      "nome": "Psicologia da Educação",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL313",
+      "nome": "Zoologia I",
+      "ch": 60,
+      "nivel": 3,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL414",
+      "nome": "Ecologia Geral",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL415",
+      "nome": "Estágio Supervisionado I",
+      "ch": 105,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL416",
+      "nome": "Fisiologia Vegetal",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL417",
+      "nome": "Microbiologia",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL418",
+      "nome": "Zoologia II",
+      "ch": 60,
+      "nivel": 4,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL519",
+      "nome": "Evolução",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL520",
+      "nome": "Fisiologia Animal",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL521",
+      "nome": "Metodologia do Ensino de Ciências",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL522",
+      "nome": "Parasitologia",
+      "ch": 60,
+      "nivel": 5,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL623",
+      "nome": "Biogeografia",
+      "ch": 60,
+      "nivel": 6,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL624",
+      "nome": "Estágio Supervisionado II",
+      "ch": 105,
+      "nivel": 6,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL625",
+      "nome": "Paleontologia",
+      "ch": 60,
+      "nivel": 6,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL726",
+      "nome": "Estágio Supervisionado III",
+      "ch": 105,
+      "nivel": 7,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL727",
+      "nome": "Trabalho de Conclusão de Curso I",
+      "ch": 30,
+      "nivel": 7,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL828",
+      "nome": "Libras",
+      "ch": 60,
+      "nivel": 8,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL829",
+      "nome": "Trabalho de Conclusão de Curso II",
+      "ch": 30,
+      "nivel": 8,
+      "natureza": "obrigatoria"
+     },
+     {
+      "codigo": "EXL900",
+      "nome": "Tópicos Especiais (optativa)",
+      "ch": 60,
+      "nivel": 0,
+      "natureza": "optativa"
+     }
+    ]
+   }
+  ],
+  "unidade": "Departamento de Ciências Exatas e Naturais",
+  "quadroDepartamento": {
+   "cabecalho": "UNIVERSIDADE EXEMPLO\nPRÓ-REITORIA DE ENSINO DE GRADUAÇÃO\nDEPARTAMENTO DE CIÊNCIAS EXATAS E NATURAIS",
+   "orientacoes": "O horário 3M1234 significa: 3 (terça-feira), M (manhã), 1º ao 4º horário.\nA carga horária do docente não pode ser maior que a do componente."
+  }
+ },
+ "docentes": [
+  {
+   "id": "d0",
+   "nome": "Ana Paula Moreira (exemplo)",
+   "curto": "Ana Paula",
+   "tratamento": "Profa.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d1",
+   "nome": "Bruno Tavares (exemplo)",
+   "curto": "Bruno",
+   "tratamento": "Prof.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d2",
+   "nome": "Carla Mendes (exemplo)",
+   "curto": "Carla",
+   "tratamento": "Profa.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d3",
+   "nome": "Carlos Henrique Lima (exemplo)",
+   "curto": "Carlos Henrique",
+   "tratamento": "Prof.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d4",
+   "nome": "Daniela Rocha (exemplo)",
+   "curto": "Daniela",
+   "tratamento": "Profa.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d5",
+   "nome": "Eduardo Pinheiro (exemplo)",
+   "curto": "Eduardo",
+   "tratamento": "Prof.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d6",
+   "nome": "Fernanda Castro (exemplo)",
+   "curto": "Fernanda",
+   "tratamento": "Profa.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d7",
+   "nome": "Gustavo Almeida (exemplo)",
+   "curto": "Gustavo",
+   "tratamento": "Prof.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d8",
+   "nome": "Helena Duarte (exemplo)",
+   "curto": "Helena",
+   "tratamento": "Profa.",
+   "vinculo": "curso",
+   "situacao": "afastado",
+   "obs": "Afastamento para qualificação (exemplo)"
+  },
+  {
+   "id": "d9",
+   "nome": "Igor Nascimento (exemplo)",
+   "curto": "Igor",
+   "tratamento": "Prof.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d10",
+   "nome": "Juliana Prado (exemplo)",
+   "curto": "Juliana",
+   "tratamento": "Profa.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "d11",
+   "nome": "Marcelo Viana (exemplo)",
+   "curto": "Marcelo",
+   "tratamento": "Prof.",
+   "vinculo": "curso",
+   "situacao": "ativo",
+   "obs": ""
+  },
+  {
+   "id": "ext1",
+   "nome": "Patrícia Gomes (exemplo)",
+   "curto": "Patrícia Gomes",
+   "tratamento": "Profa.",
+   "vinculo": "externo",
+   "situacao": "ativo",
+   "obs": "Colegiado de Pedagogia"
+  }
+ ],
+ "semestres": [
+  {
+   "id": "2027-1",
+   "rotulo": "2027.1",
+   "ano": 2027,
+   "periodo": 1,
+   "status": "Em elaboração",
+   "turmas": [
+    {
+     "id": "2027-BACH",
+     "ingresso": 2027,
+     "habilitacao": "BACH",
+     "nota": ""
+    },
+    {
+     "id": "2027-LIC",
+     "ingresso": 2027,
+     "habilitacao": "LIC",
+     "nota": ""
+    },
+    {
+     "id": "2026-BACH",
+     "ingresso": 2026,
+     "habilitacao": "BACH",
+     "nota": ""
+    },
+    {
+     "id": "2026-LIC",
+     "ingresso": 2026,
+     "habilitacao": "LIC",
+     "nota": ""
+    },
+    {
+     "id": "2025-BACH",
+     "ingresso": 2025,
+     "habilitacao": "BACH",
+     "nota": ""
+    },
+    {
+     "id": "2025-LIC",
+     "ingresso": 2025,
+     "habilitacao": "LIC",
+     "nota": ""
+    },
+    {
+     "id": "2024-BACH",
+     "ingresso": 2024,
+     "habilitacao": "BACH",
+     "nota": ""
+    },
+    {
+     "id": "2024-LIC",
+     "ingresso": 2024,
+     "habilitacao": "LIC",
+     "nota": ""
+    }
+   ],
+   "aulas": [
+    {
+     "id": "ex001",
+     "codigo": "EXB100",
+     "nome": "Biologia Celular",
+     "ch": 60,
+     "turmas": [
+      "2027-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d2",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "0-M1",
+      "0-M2",
+      "0-M3",
+      "0-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex002",
+     "codigo": "EXB101",
+     "nome": "Leitura e Produção de Textos",
+     "ch": 30,
+     "turmas": [
+      "2027-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d0",
+       "ch": 30
+      }
+     ],
+     "horarios": [
+      "0-M1",
+      "0-M2"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex003",
+     "codigo": "EXB102",
+     "nome": "Matemática Aplicada",
+     "ch": 60,
+     "turmas": [
+      "2027-BACH"
+     ],
+     "alocacao": [],
+     "horarios": [
+      "2-M1",
+      "2-M2",
+      "2-M3",
+      "2-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex005",
+     "codigo": "EXL100",
+     "nome": "Biologia Celular",
+     "ch": 60,
+     "turmas": [
+      "2027-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d5",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "0-T1",
+      "0-T2",
+      "0-T3",
+      "0-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex006",
+     "codigo": "EXL101",
+     "nome": "Leitura e Produção de Textos",
+     "ch": 30,
+     "turmas": [
+      "2027-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d8",
+       "ch": 30
+      }
+     ],
+     "horarios": [
+      "1-T1",
+      "1-T2"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex007",
+     "codigo": "EXL102",
+     "nome": "Matemática Aplicada",
+     "ch": 60,
+     "turmas": [
+      "2027-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d1",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "2-T1",
+      "2-T2",
+      "2-T3",
+      "2-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex009",
+     "codigo": "EXB308",
+     "nome": "Bioquímica",
+     "ch": 60,
+     "turmas": [
+      "2026-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d1",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "0-M1",
+      "0-M2",
+      "0-M3",
+      "0-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex010",
+     "codigo": "EXB309",
+     "nome": "Genética",
+     "ch": 60,
+     "turmas": [
+      "2026-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d8",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "1-M1",
+      "1-M2",
+      "1-M3",
+      "1-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex011",
+     "codigo": "EXB310",
+     "nome": "Morfologia Vegetal",
+     "ch": 60,
+     "turmas": [
+      "2026-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d9",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "2-M1",
+      "2-M2",
+      "2-M3",
+      "2-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex012",
+     "codigo": "EXB311",
+     "nome": "Zoologia I",
+     "ch": 60,
+     "turmas": [
+      "2026-BACH"
+     ],
+     "alocacao": [],
+     "horarios": [
+      "3-M1",
+      "3-M2",
+      "3-M3",
+      "3-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex013",
+     "codigo": "EXL309",
+     "nome": "Bioquímica",
+     "ch": 60,
+     "turmas": [
+      "2026-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d10",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "0-T1",
+      "0-T2",
+      "0-T3",
+      "0-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex014",
+     "codigo": "EXL310",
+     "nome": "Genética",
+     "ch": 60,
+     "turmas": [
+      "2026-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d0",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "1-T1",
+      "1-T2",
+      "1-T3",
+      "1-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex015",
+     "codigo": "EXL311",
+     "nome": "Morfologia Vegetal",
+     "ch": 60,
+     "turmas": [
+      "2026-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d6",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "2-T1",
+      "2-T2",
+      "2-T3",
+      "2-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex016",
+     "codigo": "EXL312",
+     "nome": "Psicologia da Educação",
+     "ch": 60,
+     "turmas": [
+      "2026-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "ext1",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "3-T1",
+      "3-T2",
+      "3-T3",
+      "3-T4"
+     ],
+     "moduloLivre": false,
+     "externo": true,
+     "colegiado": "Colegiado de Pedagogia",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex017",
+     "codigo": "EXL313",
+     "nome": "Zoologia I",
+     "ch": 60,
+     "turmas": [
+      "2026-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d8",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "4-T1",
+      "4-T2",
+      "4-T3",
+      "4-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex018",
+     "codigo": "EXB517",
+     "nome": "Estágio de Pesquisa I",
+     "ch": 120,
+     "turmas": [
+      "2025-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d4",
+       "ch": 120
+      }
+     ],
+     "horarios": [],
+     "moduloLivre": true,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex019",
+     "codigo": "EXB518",
+     "nome": "Evolução",
+     "ch": 60,
+     "turmas": [
+      "2025-BACH"
+     ],
+     "alocacao": [
+      {
+       "docente": "d8",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "1-M1",
+      "1-M2",
+      "1-M3",
+      "1-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex020",
+     "codigo": "EXB519",
+     "nome": "Fisiologia Animal",
+     "ch": 60,
+     "turmas": [
+      "2025-BACH"
+     ],
+     "alocacao": [],
+     "horarios": [
+      "2-M1",
+      "2-M2",
+      "2-M3",
+      "2-M4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex022",
+     "codigo": "EXL519",
+     "nome": "Evolução",
+     "ch": 60,
+     "turmas": [
+      "2025-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d10",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "0-T1",
+      "0-T2",
+      "0-T3",
+      "0-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex023",
+     "codigo": "EXL520",
+     "nome": "Fisiologia Animal",
+     "ch": 60,
+     "turmas": [
+      "2025-LIC"
+     ],
+     "alocacao": [],
+     "horarios": [
+      "1-T1",
+      "1-T2",
+      "1-T3",
+      "1-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex024",
+     "codigo": "EXL521",
+     "nome": "Metodologia do Ensino de Ciências",
+     "ch": 60,
+     "turmas": [
+      "2025-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d10",
+       "ch": 60
+      }
+     ],
+     "horarios": [
+      "2-T1",
+      "2-T2",
+      "2-T3",
+      "2-T4"
+     ],
+     "moduloLivre": false,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex026",
+     "codigo": "EXB724",
+     "nome": "Estágio de Pesquisa II",
+     "ch": 120,
+     "turmas": [
+      "2024-BACH"
+     ],
+     "alocacao": [],
+     "horarios": [],
+     "moduloLivre": true,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex027",
+     "codigo": "EXB725",
+     "nome": "Trabalho de Conclusão de Curso I",
+     "ch": 30,
+     "turmas": [
+      "2024-BACH"
+     ],
+     "alocacao": [],
+     "horarios": [],
+     "moduloLivre": true,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex028",
+     "codigo": "EXL726",
+     "nome": "Estágio Supervisionado III",
+     "ch": 105,
+     "turmas": [
+      "2024-LIC"
+     ],
+     "alocacao": [
+      {
+       "docente": "d9",
+       "ch": 105
+      }
+     ],
+     "horarios": [],
+     "moduloLivre": true,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    },
+    {
+     "id": "ex029",
+     "codigo": "EXL727",
+     "nome": "Trabalho de Conclusão de Curso I",
+     "ch": 30,
+     "turmas": [
+      "2024-LIC"
+     ],
+     "alocacao": [],
+     "horarios": [],
+     "moduloLivre": true,
+     "externo": false,
+     "colegiado": "",
+     "optativa": false,
+     "obs": ""
+    }
+   ],
+   "chPrevista": {
+    "d0": 120,
+    "d1": 120,
+    "d2": 120,
+    "d3": 120,
+    "d4": 120,
+    "d5": 120
+   },
+   "chPos": {
+    "d1": 30
+   },
+   "funcoes": {
+    "d0": "20h coord.",
+    "d3": "20h coord."
+   },
+   "reducaoPaid": {
+    "d0": true,
+    "d3": true
+   },
+   "pendencias": [
+    {
+     "id": "p1",
+     "texto": "Exemplo de lembrete: confirmar sala do laboratório",
+     "feito": false
+    }
+   ],
+   "ignorados": [],
+   "versoes": [],
+   "atualizadoEm": "2026-10-22T10:00:00-03:00"
+  }
+ ]
+}

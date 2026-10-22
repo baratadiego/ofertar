@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Ofertar – Manual de uso</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  @page { size: A4; margin: 18mm 17mm 20mm; }
+  :root { --ink: #16201a; --muted: #56645b; --accent: #1c5b48; --line: #d6ddd5; --soft: #eef3ef; --warn: #9a5b06; }
+  * { box-sizing: border-box; }
+  body { font: 10.5pt/1.55 "IBM Plex Sans", "Segoe UI", sans-serif; color: var(--ink); margin: 0; }
+  h1, h2, h3 { font-family: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif; font-weight: 600; line-height: 1.2; text-wrap: balance; }
+  h2 { font-size: 19pt; margin: 0 0 6pt; color: var(--accent); break-before: page; }
+  h2 .n { color: var(--muted); font-weight: 500; margin-right: 6pt; }
+  h3 { font-size: 12.5pt; margin: 14pt 0 4pt; break-after: avoid; }
+  p { margin: 0 0 7pt; }
+  ul, ol { margin: 0 0 8pt; padding-left: 17pt; }
+  li { margin: 2pt 0; }
+  code, .mono { font-family: "IBM Plex Mono", Consolas, monospace; font-size: 9pt; background: var(--soft); padding: 0 3pt; border-radius: 3pt; }
+  b { font-weight: 600; }
+  .lead { font-size: 11.5pt; color: var(--muted); margin-bottom: 10pt; }
+  figure { margin: 8pt 0 12pt; break-inside: avoid; }
+  figure img { width: 100%; border: 1px solid var(--line); border-radius: 6pt; display: block; }
+  figure.recorte img { height: 115mm; object-fit: cover; object-position: top; }
+  figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4pt; }
+  .dica { border-left: 3pt solid var(--accent); background: var(--soft); padding: 6pt 9pt; margin: 8pt 0; break-inside: avoid; border-radius: 0 4pt 4pt 0; }
+  .atencao { border-left-color: var(--warn); background: #fbf2e1; }
+  .passos { counter-reset: p; list-style: none; padding: 0; }
+  .passos li { counter-increment: p; padding-left: 22pt; position: relative; margin: 5pt 0; }
+  .passos li::before { content: counter(p); position: absolute; left: 0; top: 0; width: 15pt; height: 15pt; border-radius: 50%; background: var(--accent); color: #fff; font: 600 8.5pt/15pt "IBM Plex Sans"; text-align: center; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 9.5pt; break-inside: avoid; }
+  th, td { border-bottom: 1px solid var(--line); padding: 4pt 6pt; text-align: left; vertical-align: top; }
+  th { font: 600 8pt "IBM Plex Sans"; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--soft); }
+  .capa { height: 255mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .capa .marca { display: flex; gap: 10pt; align-items: center; }
+  .capa .marca img { width: 46pt; height: 46pt; }
+  .capa h1 { font-size: 46pt; margin: 0; color: var(--accent); }
+  .capa .sub { font-size: 15pt; color: var(--muted); max-width: 120mm; margin-top: 6pt; }
+  .capa .grade { margin: 18pt 0; border: 1px solid var(--line); border-radius: 8pt; overflow: hidden; }
+  .capa .grade img { width: 100%; display: block; }
+  .capa .rodape { font-size: 10pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8pt; }
+  .sumario { break-before: page; }
+  .sumario ol { list-style: none; padding: 0; columns: 1; }
+  .sumario li { display: flex; gap: 6pt; border-bottom: 1px dotted var(--line); padding: 4pt 0; font-size: 11pt; }
+  .sumario li span { color: var(--muted); width: 18pt; }
+  .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
+  .duas figure { margin: 4pt 0; }
+</style>
+</head>
+<body>
+
+<section class="capa">
+  <div>
+    <div class="marca"><img src="../../public/icon-192.png" alt=""><div style="font: 600 11pt 'IBM Plex Sans'; color: var(--muted)">LAMEN · UNIFAP</div></div>
+    <h1 style="margin-top:26pt">Ofertar</h1>
+    <div class="sub">Manual de uso do organizador de ofertas de disciplinas para coordenações de curso</div>
+    <div class="grade"><img src="../telas/02-inicio.png" alt="Painel inicial do Ofertar"></div>
+  </div>
+  <div class="rodape">
+    Francisco Diego Barros Barata<br>
+    Laboratório Multidisciplinar de Ensino (LAMEN) · Universidade Federal do Amapá<br>
+    Versão 1.0.0 · outubro de 2026 · Software livre, licença MIT
+  </div>
+</section>
+
+<section class="sumario">
+  <h1 style="font-size:20pt;color:var(--accent);margin:0 0 10pt">Sumário</h1>
+  <ol>
+    <li><span>1</span>O que é o Ofertar</li>
+    <li><span>2</span>Como acessar e instalar</li>
+    <li><span>3</span>Primeiros passos e onde ficam os dados</li>
+    <li><span>4</span>Configurar o curso</li>
+    <li><span>5</span>Cadastrar docentes e conferir a carga horária</li>
+    <li><span>6</span>Montar a grade de cada turma</li>
+    <li><span>7</span>Conferência automática: Início, Pendências e Matriz</li>
+    <li><span>8</span>Versões da oferta</li>
+    <li><span>9</span>Documentos gerados</li>
+    <li><span>10</span>Novo semestre</li>
+    <li><span>11</span>Salvar, abrir e trabalhar em equipe</li>
+    <li><span>12</span>Perguntas frequentes</li>
+    <li><span>13</span>Créditos, licença e como citar</li>
+  </ol>
+  <p class="lead" style="margin-top:16pt">As telas deste manual usam o <b>curso de exemplo</b> que vem no aplicativo (um curso fictício de Ciências Naturais). Nomes de docentes e componentes são inventados.</p>
+</section>
+
+<h2><span class="n">1</span>O que é o Ofertar</h2>
+<p class="lead">Uma ferramenta para a coordenação montar a oferta de disciplinas do semestre em um lugar só, com conferência automática e documentos prontos.</p>
+<p>Na prática, a oferta costuma ser montada em um documento de texto com uma tabela por turma. A mesma informação é depois redigitada na tabela de carga horária docente, no quadro de componentes “a definir”, no memorando aos outros colegiados, no quadro enviado ao Departamento e em cada versão (prévia, discentes, docentes, final). Com isso, é fácil um docente aparecer em duas turmas no mesmo horário, a carga horária não bater com a grade ou uma obrigatória ficar de fora.</p>
+<p>No Ofertar existe <b>uma base só</b>: você monta a grade e o resto é calculado a partir dela.</p>
+<table>
+  <tr><th>Você faz</th><th>O Ofertar calcula e confere</th></tr>
+  <tr><td>Monta a grade de cada turma, clicando nos horários</td><td>Choques de horário de docentes e de turmas; aulas por semana compatíveis com a carga horária</td></tr>
+  <tr><td>Indica o docente de cada componente</td><td>Carga horária de cada docente, comparada com a prevista (PAID) e com o mínimo de ensino</td></tr>
+  <tr><td>Cadastra as matrizes curriculares</td><td>Obrigatórias de cada período que ficaram fora da oferta; códigos que não existem na matriz da turma</td></tr>
+  <tr><td>Guarda versões quando envia a oferta</td><td>O que mudou entre uma versão e outra</td></tr>
+  <tr><td>Clica em “Baixar”</td><td>Documentos em Word para discentes, docentes e Departamento, planilha de carga horária e rascunho de memorando</td></tr>
+</table>
+<div class="dica">O Ofertar funciona no navegador, sem servidor. <b>Nenhum dado da oferta é enviado para a internet</b>: tudo fica no seu computador e no arquivo que você salvar.</div>
+
+<h2><span class="n">2</span>Como acessar e instalar</h2>
+<p class="lead">Use pelo endereço na internet ou instale como aplicativo no computador.</p>
+<h3>Pelo endereço</h3>
+<p>Abra <code>https://ofertar.vercel.app</code> no Chrome ou no Edge. O aplicativo carrega e já pode ser usado. Depois da primeira abertura, funciona também <b>sem internet</b>.</p>
+<h3>Instalar no computador</h3>
+<ol class="passos">
+  <li>Abra o endereço no Chrome ou no Edge.</li>
+  <li>Clique no ícone de instalação na barra de endereço (um monitor com uma seta) ou no item <b>“Instalar no computador”</b>, no rodapé do menu lateral do Ofertar.</li>
+  <li>Confirme. O Ofertar ganha ícone na área de trabalho e no Menu Iniciar e abre em janela própria.</li>
+</ol>
+<p>O aplicativo instalado se <b>atualiza sozinho</b> quando há versão nova: basta fechar e abrir.</p>
+<h3>Sem internet desde o início</h3>
+<p>Também é possível usar o arquivo <code>app/index.html</code> do repositório: baixe e abra com duplo clique. Funciona igual, mas não se atualiza sozinho.</p>
+<div class="dica atencao">Cada navegador guarda os seus próprios dados. Se você usava o arquivo local e passou para o endereço (ou o contrário), abra o seu arquivo <code>.json</code> uma vez pelo botão <b>“Abrir arquivo de projeto”</b>.</div>
+
+<h2><span class="n">3</span>Primeiros passos e onde ficam os dados</h2>
+<figure><img src="../telas/01-abertura.png" alt=""><figcaption>Tela de abertura.</figcaption></figure>
+<p>Na tela de abertura há três caminhos:</p>
+<ul>
+  <li><b>Abrir arquivo de projeto</b>: um <code>.json</code> salvo antes, por exemplo na pasta da secretaria no OneDrive ou Google Drive.</li>
+  <li><b>Explorar um curso de exemplo</b>: um curso fictício já montado, para conhecer o aplicativo.</li>
+  <li><b>Começar um curso novo</b>: leva a Configurações para cadastrar horários, habilitações e matrizes.</li>
+</ul>
+<h3>Onde ficam os dados</h3>
+<ul>
+  <li><b>No navegador</b>: cada alteração é guardada automaticamente. Ao reabrir, você continua de onde parou.</li>
+  <li><b>No arquivo <code>.json</code></b>: é a cópia de segurança e o que outra pessoa abre para continuar o trabalho. Use <b>Salvar arquivo</b> (ou <code>Ctrl+S</code>). No Chrome e no Edge, depois do primeiro salvamento, o aplicativo grava direto no mesmo arquivo.</li>
+</ul>
+<p>O indicador no topo mostra a situação: <b>“Guardado no navegador”</b> ou <b>“Arquivo não salvo”</b> quando há alterações ainda não gravadas no <code>.json</code>.</p>
+<p><b>Desfazer</b> e <b>Refazer</b> (<code>Ctrl+Z</code> / <code>Ctrl+Y</code>) valem para qualquer alteração.</p>
+<h3>Navegação</h3>
+<p>O menu lateral leva às telas: <b>Início, Grade, Docentes, Matriz, Pendências, Versões, Documentos e Configurações</b>. O seletor <b>Semestre</b> fica no topo do menu. O botão ao lado do nome recolhe o menu para dar espaço ao quadro. <b>Tela inicial</b> volta à abertura sem perder o projeto, que pode ser retomado em “Continuar o projeto aberto”. O tema claro ou escuro é escolhido no rodapé do menu.</p>
+
+<h2><span class="n">4</span>Configurar o curso</h2>
+<p class="lead">Tudo o que muda de um curso para outro fica em Configurações. Faça isso uma vez; depois só ajuste.</p>
+<figure class="recorte"><img src="../telas/13-configuracoes.png" alt=""><figcaption>Configurações: curso, habilitações, horários, quadro do Departamento, matrizes e turmas do semestre.</figcaption></figure>
+<table>
+  <tr><th>Item</th><th>O que informar</th></tr>
+  <tr><td>Curso</td><td>Instituição, departamento (sai no cabeçalho dos documentos), nome do curso e sigla.</td></tr>
+  <tr><td>Habilitações</td><td>Bacharelado, Licenciatura ou uma única, com o nome do coordenador ou coordenadora de cada uma.</td></tr>
+  <tr><td>Número de semestres</td><td>Quantos períodos tem o curso (ex.: 8).</td></tr>
+  <tr><td>Horas por aula semanal</td><td>Com 15, um componente de 60h precisa de 4 aulas por semana.</td></tr>
+  <tr><td>CH mínima de ensino</td><td>Mínimo de ensino por docente no semestre (graduação + pós), por exemplo 120h.</td></tr>
+  <tr><td>Horários das aulas</td><td>Início e fim de cada aula da manhã, tarde e noite.</td></tr>
+  <tr><td>Quadro do Departamento</td><td>Cabeçalho e orientações do quadro de ofertas enviado ao Departamento.</td></tr>
+  <tr><td>Turmas do semestre</td><td>Turmas por ano de ingresso, cor do quadro de cada ano e observação impressa abaixo da grade.</td></tr>
+</table>
+<h3>Matrizes curriculares</h3>
+<p>Cada matriz vale para um intervalo de anos de ingresso (ex.: currículo 2015 até a turma 2024; currículo 2025 a partir da turma 2025). O aplicativo escolhe sozinho a matriz de cada turma.</p>
+<figure><img src="../telas/14-matriz-importar.png" alt=""><figcaption>Cadastro de matriz, com importação por planilha e a explicação do formato.</figcaption></figure>
+<ol class="passos">
+  <li>Em <b>Matrizes curriculares</b>, clique em <b>+ Matriz</b>.</li>
+  <li>Dê um nome, escolha a habilitação e o intervalo de anos de ingresso.</li>
+  <li>Clique em <b>Baixar modelo</b>, preencha no Excel (uma linha por componente: <code>nivel; codigo; nome; ch; natureza</code>) e salve como CSV.</li>
+  <li>Clique em <b>Importar .csv</b> e confira a lista. Use 0 no nível para optativas.</li>
+</ol>
+
+<h2><span class="n">5</span>Cadastrar docentes e conferir a carga horária</h2>
+<figure class="recorte"><img src="../telas/08-docentes.png" alt=""><figcaption>Aba Docentes: carga horária calculada da grade, comparada com a prevista.</figcaption></figure>
+<p>Use <b>+ Docente</b> para cadastrar: nome completo, nome curto (o que aparece na grade), tratamento (Prof./Profa.), <b>vínculo</b> (do curso ou de outro colegiado) e <b>situação</b> (ativo, afastado ou dispensado do ensino). Docentes também podem ser cadastrados na hora, dentro de um componente.</p>
+<p>A tabela mostra, para cada docente:</p>
+<ul>
+  <li><b>Graduação</b>: componentes do semestre, com a CH de cada um, somados a partir da grade.</li>
+  <li><b>Pós</b>: carga horária de ensino na pós-graduação no semestre, informada à mão.</li>
+  <li><b>Total de ensino</b> e o equivalente em horas-aula por semana.</li>
+  <li><b>Função</b> (ex.: “20h coord.”) e a marcação <b>Redução PAID</b>, que dispensa o mínimo de ensino.</li>
+  <li><b>Prevista</b>: a CH do plano de atividades (PAID), para comparação.</li>
+  <li><b>Situação</b>: <i>Confere</i>, a diferença em horas, <i>Prevista em branco</i>, <i>Abaixo de 120h</i> ou <i>Alocado, mas indisponível</i>.</li>
+</ul>
+<p>Abaixo da tabela ficam os docentes sem ensino no semestre, os afastados e dispensados e os docentes de outros colegiados. <b>Horário</b> mostra a semana do docente em todas as turmas.</p>
+
+<h2><span class="n">6</span>Montar a grade de cada turma</h2>
+<figure><img src="../telas/03-grade.png" alt=""><figcaption>Grade: turmas à esquerda, quadro da semana ao centro, componentes da turma à direita.</figcaption></figure>
+<h3>Incluir um componente</h3>
+<ol class="passos">
+  <li>Escolha a turma na lista à esquerda.</li>
+  <li>Clique em <b>+ Incluir</b> ou numa célula vazia do quadro.</li>
+  <li>Busque na matriz pelo código ou nome. Código, nome e CH são preenchidos automaticamente.</li>
+  <li>Marque a turma (ou mais de uma, para <b>turma conjunta</b>), indique o docente e salve.</li>
+</ol>
+<figure><img src="../telas/06-editor-componente.png" alt=""><figcaption>Edição de componente: turmas, docentes e divisão da carga horária, outro colegiado, módulo livre e optativa.</figcaption></figure>
+<h3>Marcar os horários</h3>
+<p>Clique no componente no painel da direita: o quadro passa ao modo de marcação. Clique nas células para marcar ou desmarcar. A barra mostra quantas aulas por semana já foram marcadas e quantas a CH pede. Termine com <b>Concluir</b> ou <code>Esc</code>.</p>
+<figure><img src="../telas/04-grade-marcando.png" alt=""><figcaption>Marcando os horários de um componente. Choques aparecem em vermelho, com “!”.</figcaption></figure>
+<h3>Situações comuns</h3>
+<table>
+  <tr><th>Situação</th><th>Como fazer</th></tr>
+  <tr><td>A mesma disciplina para duas turmas, no mesmo horário e com o mesmo docente</td><td>No componente, marque as duas turmas. Ele aparece nos dois quadros e a CH conta uma vez para o docente.</td></tr>
+  <tr><td>Mais de um docente no componente</td><td>Em Docentes, adicione cada um e divida a CH (ex.: 60h + 45h).</td></tr>
+  <tr><td>Estágio, prática, ACE, TCC</td><td><b>Mover para módulo livre</b>: o componente fica sem horário fixo e sai como “Módulo livre” nos documentos.</td></tr>
+  <tr><td>Docente de outro colegiado</td><td>Marque <b>Docente de outro colegiado</b> e informe qual. O componente entra no memorando.</td></tr>
+  <tr><td>Optativas no mesmo horário</td><td>Marque <b>Optativa</b>: optativas podem coincidir sem gerar choque.</td></tr>
+  <tr><td>Turno da noite</td><td>Marque <b>Noite</b> acima do quadro. Qualquer turno pode ser escondido; se tiver aulas, aparece o aviso “aulas ocultas”.</td></tr>
+  <tr><td>Turma que não está na lista</td><td><b>+ Adicionar turma</b>, no fim da lista de turmas.</td></tr>
+</table>
+<h3>Mais espaço para o quadro</h3>
+<p><b>Ampliar quadro</b> recolhe os dois painéis laterais. Junto com o menu recolhido, a semana inteira cabe em telas menores.</p>
+<figure><img src="../telas/07-quadro-ampliado.png" alt=""><figcaption>Quadro ampliado, com menu e painéis recolhidos.</figcaption></figure>
+
+<h2><span class="n">7</span>Conferência automática: Início, Pendências e Matriz</h2>
+<p class="lead">O Ofertar confere a oferta enquanto você trabalha.</p>
+<h3>Início</h3>
+<p>Resume o semestre: componentes ofertados, com horário, sem docente, conflitos e carga horária total. Mostra a montagem de cada turma, os itens que precisam de atenção e os componentes em módulo livre.</p>
+<h3>Pendências</h3>
+<figure class="recorte"><img src="../telas/10-pendencias.png" alt=""><figcaption>Pendências agrupadas por tipo, com acesso direto à grade.</figcaption></figure>
+<table>
+  <tr><th>Verificação</th><th>Gravidade</th></tr>
+  <tr><td>Choque de horário do docente ou da turma</td><td>Erro</td></tr>
+  <tr><td>Docente afastado ou dispensado alocado</td><td>Erro</td></tr>
+  <tr><td>CH do docente maior que a do componente (regra do Sigaa)</td><td>Erro</td></tr>
+  <tr><td>Aulas por semana diferentes do que a CH pede</td><td>Aviso</td></tr>
+  <tr><td>Componente sem docente</td><td>Aviso</td></tr>
+  <tr><td>CH do docente diferente da prevista ou abaixo do mínimo de ensino</td><td>Aviso</td></tr>
+  <tr><td>Obrigatória do período fora da oferta</td><td>Aviso</td></tr>
+  <tr><td>Código fora da matriz da turma; função sem componente</td><td>Observação</td></tr>
+</table>
+<p>O que for intencional (por exemplo, turma de remanescentes) pode ser marcado como <b>Ciente</b>. Há também uma lista de <b>lembretes</b> da coordenação.</p>
+<h3>Matriz × oferta</h3>
+<figure><img src="../telas/09-matriz.png" alt=""><figcaption>Componentes da matriz da turma, com a situação de cada um na oferta.</figcaption></figure>
+
+<h2><span class="n">8</span>Versões da oferta</h2>
+<p>Guarde uma versão sempre que enviar a oferta (prévia ao colegiado, versão aos discentes, final). Depois, <b>Comparar com a atual</b> lista exatamente o que mudou: componentes incluídos ou removidos, horários, docentes, CH e turmas. A lista pode ser copiada para avisar discentes e docentes. <b>Restaurar</b> volta a oferta para uma versão anterior.</p>
+<figure><img src="../telas/11-versoes-comparar.png" alt=""><figcaption>Comparação entre a versão guardada e a oferta atual.</figcaption></figure>
+
+<h2><span class="n">9</span>Documentos gerados</h2>
+<figure class="recorte"><img src="../telas/12-documentos.png" alt=""><figcaption>Aba Documentos.</figcaption></figure>
+<table>
+  <tr><th>Documento</th><th>Conteúdo</th></tr>
+  <tr><td>Oferta para discentes (.docx)</td><td>Quadro de horários de cada turma, com a cor do ano de ingresso, módulos livres e observações.</td></tr>
+  <tr><td>Oferta para docentes (.docx)</td><td>Os quadros, mais a distribuição da carga horária docente, componentes a definir e docentes externos.</td></tr>
+  <tr><td>Quadro para o Departamento (.docx)</td><td>Uma linha por componente e docente, com a CH do docente e o horário no padrão do Sigaa (ex.: <code>T1234</code>), por habilitação, com coordenador e orientações.</td></tr>
+  <tr><td>Planilha de carga horária (.csv)</td><td>CH prevista e alocada de cada docente, para abrir no Excel.</td></tr>
+  <tr><td>Rascunho de memorando</td><td>Texto por colegiado, pedindo indicação ou confirmação de docentes de outros colegiados. Atualiza a cada mudança na oferta.</td></tr>
+</table>
+<div class="duas">
+  <figure><img src="../telas/16-word-discentes.png" alt=""><figcaption>Oferta para discentes.</figcaption></figure>
+  <figure><img src="../telas/17-word-quadro.png" alt=""><figcaption>Quadro para o Departamento.</figcaption></figure>
+</div>
+<figure><img src="../telas/18-word-ch.png" alt="" style="max-height:110mm;object-fit:contain"><figcaption>Distribuição da carga horária docente (documento para docentes).</figcaption></figure>
+
+<h2><span class="n">10</span>Novo semestre</h2>
+<ol class="passos">
+  <li>Em <b>Configurações → Semestre</b>, clique em <b>+ Novo semestre</b>.</li>
+  <li>Informe o semestre (ex.: <code>2027.2</code>).</li>
+  <li>Escolha o ponto de partida: <b>reaproveitar o semestre de mesmo período do ano anterior</b> (ex.: 2026.2 → 2027.2) ou começar vazio.</li>
+</ol>
+<p>Ao reaproveitar, cada componente vai para a turma que estará naquele período no novo semestre, com os mesmos horários e docentes. Depois, só ajuste o que mudou. As turmas de cada habilitação e período são criadas automaticamente.</p>
+
+<h2><span class="n">11</span>Salvar, abrir e trabalhar em equipe</h2>
+<ul>
+  <li><b>Salve o <code>.json</code> numa pasta compartilhada</b> da secretaria (OneDrive, Google Drive). Ele é a cópia de segurança.</li>
+  <li><b>Outra pessoa continua o trabalho</b> abrindo o mesmo arquivo em <b>Abrir arquivo de projeto</b>.</li>
+  <li><b>Uma pessoa edita por vez.</b> Se duas pessoas editarem o mesmo arquivo ao mesmo tempo, vale a última gravação; o aplicativo não junta alterações.</li>
+  <li><b>Vários cursos podem usar o Ofertar ao mesmo tempo</b>, cada um com o seu arquivo. Um nunca vê os dados do outro.</li>
+  <li><b>Fechar projeto e limpar este navegador</b>, em Configurações, apaga só a cópia do navegador; o arquivo salvo não é afetado.</li>
+</ul>
+<figure><img src="../telas/15-tela-inicial-continuar.png" alt=""><figcaption>A tela inicial permite continuar o projeto aberto, abrir outro arquivo ou começar outro curso.</figcaption></figure>
+
+<h2><span class="n">12</span>Perguntas frequentes</h2>
+<h3>O aplicativo envia dados para algum servidor?</h3>
+<p>Não. O endereço na internet apenas entrega o aplicativo. A oferta fica no seu navegador e no arquivo que você salvar.</p>
+<h3>Abri em outro computador e está vazio.</h3>
+<p>Cada computador e navegador tem a sua cópia. Use <b>Abrir arquivo de projeto</b> e escolha o <code>.json</code> salvo.</p>
+<h3>Os acentos da matriz importada saíram errados.</h3>
+<p>O Ofertar reconhece os arquivos CSV salvos pelo Excel. Se ainda assim houver problema, salve como “CSV UTF-8” no Excel e importe de novo.</p>
+<h3>Por que um componente não aparece no memorando?</h3>
+<p>O memorando reúne só os componentes marcados como <b>Docente de outro colegiado</b> ou com docente externo alocado. Os demais sem docente aparecem num aviso abaixo do memorando.</p>
+<h3>Uma turma conjunta aparece duas vezes no quadro do Departamento?</h3>
+<p>Não. Ela entra uma vez, na habilitação cuja matriz tem o código, para evitar duplicidade no Sigaa.</p>
+<h3>Posso usar em outro curso ou outra instituição?</h3>
+<p>Sim. Comece um curso novo e cadastre as suas configurações, matrizes e docentes. O código é livre (licença MIT).</p>
+
+<h2><span class="n">13</span>Créditos, licença e como citar</h2>
+<p><b>Ofertar</b> foi desenvolvido no <b>Laboratório Multidisciplinar de Ensino (LAMEN)</b> da <b>Universidade Federal do Amapá (UNIFAP)</b>, a partir da rotina de organização das ofertas de disciplinas da coordenação de curso.</p>
+<p><b>Autor:</b> Francisco Diego Barros Barata.</p>
+<p><b>Licença:</b> MIT. É permitido usar, copiar, modificar e redistribuir, mantendo o aviso de direitos autorais.</p>
+<p><b>Código-fonte e documentação:</b> <code>https://github.com/baratadiego/ofertar</code></p>
+<h3>Como citar</h3>
+<p>BARATA, Francisco Diego Barros. <i>Ofertar: organizador de ofertas de disciplinas para coordenações de curso</i>. Versão 1.0.0. Macapá: Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá, 2026. Software. Disponível em: https://github.com/baratadiego/ofertar.</p>
+<p style="color:var(--muted);font-size:9.5pt">Com o arquivamento no Zenodo, use o DOI indicado na página do repositório.</p>
+
+</body>
+</html>
