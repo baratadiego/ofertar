@@ -1,15 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ofertar">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 135 375 417" role="img" aria-label="Ofertar">
   <title>Ofertar</title>
-  <rect width="512" height="512" rx="116" fill="#1c5b48"/>
-  <rect x="92" y="132" width="328" height="292" rx="40" fill="#f6f2e8"/>
-  <path d="M92 172a40 40 0 0 1 40-40h248a40 40 0 0 1 40 40v38H92z" fill="#e9a23b"/>
-  <rect x="168" y="92" width="24" height="76" rx="12" fill="#f6f2e8" stroke="#1c5b48" stroke-width="10"/>
-  <rect x="320" y="92" width="24" height="76" rx="12" fill="#f6f2e8" stroke="#1c5b48" stroke-width="10"/>
-  <rect x="124" y="238" width="88" height="70" rx="16" fill="#cfe8d8"/>
-  <rect x="212" y="238" width="88" height="70" rx="16" fill="#d6e2f5"/>
-  <rect x="300" y="238" width="88" height="70" rx="16" fill="#f6dcc4"/>
-  <rect x="124" y="326" width="88" height="70" rx="16" fill="#cfe8d8"/>
-  <rect x="212" y="326" width="88" height="70" rx="16" fill="#f6dcc4"/>
-  <rect x="300" y="326" width="88" height="70" rx="16" fill="#1c5b48"/>
-  <path d="M324 362l14 14 28-30" fill="none" stroke="#f6f2e8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1665b8"/><stop offset="1" stop-color="#0b3d84"/></linearGradient>
+    <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d95ee"/><stop offset="1" stop-color="#1b78d8"/></linearGradient>
+    <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4fb"/><stop offset="1" stop-color="#5aaef5"/></linearGradient>
+  </defs>
+  <path d="M205.0 234.7Q205.0 212.0 225.7 199.9L302.5 155.1Q318.0 146.0 323.5 152.4L324.5 153.6Q330.0 160.0 330.0 178.0L330.0 250.0Q330.0 272.0 311.0 283.0L300.6 289.0Q285.0 298.0 268.6 290.6L225.1 271.0Q205.0 262.0 205.0 240.0Z" fill="url(#gD)"/>
+  <path d="M246 224L276 209L306 224L276 239Z" fill="#eaf5ff" stroke="#eaf5ff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M258 233v14q18 12 36 0v-14l-18 9z" fill="#eaf5ff" opacity=".85"/>
+  <path d="M345.0 212.0Q345.0 190.0 365.6 197.8L459.4 233.2Q480.0 241.0 480.0 263.0L480.0 361.0Q480.0 383.0 459.4 375.2L365.6 339.8Q345.0 332.0 345.0 310.0Z" fill="url(#gB)"/>
+  <path d="M378 232.0l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M402 241.1l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M426 250.2l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M378 256.0l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M402 265.1l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M426 274.2l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M378 280.0l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M402 289.1l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M426 298.2l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M378 304.0l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M402 313.1l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M426 322.2l17 6.5v17l-17 -6.5z" fill="#d4eafd"/>
+  <path d="M150.0 291.0Q150.0 265.0 174.3 274.3L307.7 325.7Q332.0 335.0 332.0 361.0L332.0 494.0Q332.0 520.0 307.7 510.7L174.3 459.3Q150.0 450.0 150.0 424.0Z" fill="url(#gA)"/>
+  <path d="M184 330L270 362.7" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M184 366L286 404.8" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M184 402L244 424.8" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M345.0 379.0Q345.0 355.0 367.4 363.5L482.6 407.5Q505.0 416.0 505.0 440.0L505.0 518.0Q505.0 542.0 482.6 533.5L367.4 489.5Q345.0 481.0 345.0 457.0Z" fill="#5cc48f"/>
+  <path d="M378 420L468 454.2" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/>
+  <path d="M378 455L440 478.6" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/>
 </svg>

@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/marca/ofertar-logo.svg" alt="Ofertar" width="420"></p>
+<p align="center"><img src="docs/marca/ofertar-logo.svg" alt="Ofertar" width="460"></p>
 
 # Ofertar
 

@@ -1,6 +1,6 @@
 // Ofertar — funciona offline. A página é buscada na rede quando há conexão
 // (assim todos recebem a versão nova) e vem do cache quando não há.
-const CACHE = 'ofertas-v2'
+const CACHE = 'ofertas-v3'
 const BASICOS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './favicon.svg']
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(BASICOS)).then(() => self.skipWaiting())) })
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())) })

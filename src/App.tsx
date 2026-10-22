@@ -269,10 +269,7 @@ function BoasVindas({ atual, onContinuar, onAbrir, onExemplo, onBranco }: { atua
       <div className="mini-grade" aria-hidden="true">
         {amostra.map((r, i) => [<i className="h" key={'h' + i}>{['07:30', '08:20', '09:10', '10:20', '11:10'][i]}</i>, ...r.map((v, j) => <i key={i + '-' + j} style={v ? { background: `hsl(${[0, 155, 30, 210][v]} 40% var(--cell-l))`, borderLeft: `3px solid hsl(${[0, 155, 30, 210][v]} 50% var(--cell-b))` } : undefined} />)])}
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <img src={logo} alt="" width={40} height={40} />
-        <span style={{ font: '600 22px var(--f-body)', letterSpacing: '-.01em' }}>Ofertar</span>
-      </div>
+      <img src={logo} alt="Ofertar" style={{ height: 46, width: 'auto', display: 'block', alignSelf: 'flex-start', margin: 0 }} />
       <h1>Organize a oferta de disciplinas do curso num lugar só</h1>
       <p>Monte a grade de cada turma, distribua a carga horária docente e deixe o app apontar choques de horário, componentes sem docente e obrigatórias que ficaram de fora. Os documentos para discentes e docentes saem prontos em Word.</p>
       {atual && (
