@@ -1,0 +1,161 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1640 1060' width='1640' height='1060'>
+<title>Ofertar – modelo de dados do arquivo de projeto</title>
+<defs>
+  <marker id='fim' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='#8aa0b6'/></marker>
+  <marker id='ini' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='#8aa0b6'/></marker>
+</defs>
+<rect width='1640' height='1060' fill='#ffffff'/>
+<text x='40' y='46' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='bold' fill='#5b6875' text-anchor='start'>MODELO DE DADOS — arquivo de projeto .json (formato ofertas-curso/1)</text>
+<rect x='690' y='70' width='260' height='154' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='690' y='70' width='260' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='690' y='90' width='260' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='820.0' y='97' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Projeto</text>
+<text x='704' y='136' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>formato</text>
+<text x='704' y='160' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>config</text>
+<text x='704' y='184' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>docentes[ ]</text>
+<text x='704' y='208' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>semestres[ ]</text>
+<rect x='150' y='280' width='300' height='178' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='150' y='280' width='300' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='150' y='300' width='300' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='300.0' y='307' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Config</text>
+<text x='164' y='346' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>curso, sigla, instituição</text>
+<text x='164' y='370' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>chPorAulaSemanal</text>
+<text x='164' y='394' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>chMinimaEnsino</text>
+<text x='164' y='418' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>dias[ ], turnos[ ]</text>
+<text x='164' y='442' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>quadroDepartamento</text>
+<rect x='690' y='280' width='260' height='226' rx='10' fill='#ffffff' stroke='#3fae74' stroke-width='2'/>
+<rect x='690' y='280' width='260' height='40' rx='10' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<rect x='690' y='300' width='260' height='20' rx='0' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<text x='820.0' y='307' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Semestre</text>
+<text x='704' y='346' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id (ex.: 2027-1)</text>
+<text x='704' y='370' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>ano, período, status</text>
+<text x='704' y='394' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>chPrevista {docente}</text>
+<text x='704' y='418' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>chPos {docente}</text>
+<text x='704' y='442' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>reducaoPaid {docente}</text>
+<text x='704' y='466' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>funções {docente}</text>
+<text x='704' y='490' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>ignorados[ ]</text>
+<rect x='1010' y='330' width='190' height='130' rx='10' fill='#ffffff' stroke='#3fae74' stroke-width='2'/>
+<rect x='1010' y='330' width='190' height='40' rx='10' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<rect x='1010' y='350' width='190' height='20' rx='0' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<text x='1105.0' y='357' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Versão</text>
+<text x='1024' y='396' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id, nome</text>
+<text x='1024' y='420' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>criadaEm</text>
+<text x='1024' y='444' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>snapshot</text>
+<rect x='1290' y='280' width='300' height='178' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='1290' y='280' width='300' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='1290' y='300' width='300' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='1440.0' y='307' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Docente</text>
+<text x='1304' y='346' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id</text>
+<text x='1304' y='370' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>nome, tratamento</text>
+<text x='1304' y='394' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>vínculo: curso | externo</text>
+<text x='1304' y='418' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>situação: ativo | afastado</text>
+<text x='1304' y='442' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>    | dispensado</text>
+<rect x='40' y='600' width='220' height='130' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='40' y='600' width='220' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='40' y='620' width='220' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='150.0' y='627' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Habilitação</text>
+<text x='54' y='666' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id (LIC, BACH)</text>
+<text x='54' y='690' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>nome, abrev</text>
+<text x='54' y='714' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>coordenador</text>
+<rect x='310' y='600' width='240' height='130' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='310' y='600' width='240' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='310' y='620' width='240' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='430.0' y='627' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Matriz</text>
+<text x='324' y='666' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id</text>
+<text x='324' y='690' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>habilitação</text>
+<text x='324' y='714' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>ingressoDe, ingressoAte</text>
+<rect x='40' y='830' width='220' height='106' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='40' y='830' width='220' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='40' y='850' width='220' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='150.0' y='857' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Turno → Slot</text>
+<text x='54' y='896' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id (M, T, N)</text>
+<text x='54' y='920' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>slots: id, início, fim</text>
+<rect x='310' y='830' width='240' height='154' rx='10' fill='#ffffff' stroke='#0b3d84' stroke-width='2'/>
+<rect x='310' y='830' width='240' height='40' rx='10' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<rect x='310' y='850' width='240' height='20' rx='0' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='430.0' y='857' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>ComponenteMatriz</text>
+<text x='324' y='896' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>código</text>
+<text x='324' y='920' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>nome, CH</text>
+<text x='324' y='944' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>nível (período)</text>
+<text x='324' y='968' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>natureza</text>
+<rect x='620' y='620' width='220' height='154' rx='10' fill='#ffffff' stroke='#3fae74' stroke-width='2'/>
+<rect x='620' y='620' width='220' height='40' rx='10' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<rect x='620' y='640' width='220' height='20' rx='0' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<text x='730.0' y='647' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Turma</text>
+<text x='634' y='686' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id (2026-BACH)</text>
+<text x='634' y='710' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>ingresso</text>
+<text x='634' y='734' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>habilitação</text>
+<text x='634' y='758' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>cor</text>
+<rect x='900' y='620' width='290' height='178' rx='10' fill='#ffffff' stroke='#3fae74' stroke-width='2'/>
+<rect x='900' y='620' width='290' height='40' rx='10' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<rect x='900' y='640' width='290' height='20' rx='0' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<text x='1045.0' y='647' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Aula (componente ofertado)</text>
+<text x='914' y='686' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>id, código, nome, CH</text>
+<text x='914' y='710' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>turmas[ ]</text>
+<text x='914' y='734' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>horários[ ] "dia-slot"</text>
+<text x='914' y='758' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>móduloLivre, optativa</text>
+<text x='914' y='782' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>externo, colegiado</text>
+<rect x='1290' y='660' width='220' height='106' rx='10' fill='#ffffff' stroke='#3fae74' stroke-width='2'/>
+<rect x='1290' y='660' width='220' height='40' rx='10' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<rect x='1290' y='680' width='220' height='20' rx='0' fill='#3fae74' stroke='#3fae74' stroke-width='0'/>
+<text x='1400.0' y='687' font-family='Arial, Helvetica, sans-serif' font-size='18' font-weight='bold' fill='#ffffff' text-anchor='middle'>Alocação</text>
+<text x='1304' y='726' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='bold' fill='#1d2733' text-anchor='start'>docente</text>
+<text x='1304' y='750' font-family='Arial, Helvetica, sans-serif' font-size='14.5' font-weight='normal' fill='#5b6875' text-anchor='start'>CH</text>
+<path d='M690 140 L300 140 L300 280' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='676' y='132' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='314' y='272' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<path d='M950 140 L1440 140 L1440 280' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='964' y='132' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='1454' y='272' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M820 224 L820 280' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='834' y='242' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='834' y='272' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M200 458 L200 560 L150 560 L150 600' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='214' y='476' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='164' y='592' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M300 458 L300 560 L430 560 L430 600' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='0' y='0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'></text>
+<text x='444' y='592' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M170 458 L170 540 L25 540 L25 880 L40 880' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='0' y='0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'></text>
+<text x='28' y='872' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M260 660 L310 660' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='272' y='652' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='298' y='652' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M430 730 L430 830' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='444' y='748' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='444' y='822' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M950 400 L1010 400' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='962' y='392' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='998' y='392' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M730 506 L730 620' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='744' y='524' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='744' y='612' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M950 476 L1045 476 L1045 620' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='962' y='468' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='1059' y='612' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M840 700 L900 700' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='852' y='692' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<text x='888' y='692' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M1190 720 L1290 720' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='1202' y='712' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<text x='1278' y='712' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<path d='M1400 660 L1400 458' fill='none' stroke='#8aa0b6' stroke-width='2.2'/>
+<text x='1414' y='652' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>N</text>
+<text x='1414' y='476' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#0b3d84' text-anchor='middle'>1</text>
+<path d='M620 760 L580 760 L580 700 L554 700' fill='none' stroke='#1689e6' stroke-width='2' stroke-dasharray='6 5' marker-end='url(#fim)'/>
+<text x='585' y='790' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#1689e6' text-anchor='middle' font-style='italic'>matriz pela faixa</text>
+<text x='585' y='806' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#1689e6' text-anchor='middle' font-style='italic'>de ingresso</text>
+<path d='M980 798 L980 900 L554 900' fill='none' stroke='#1689e6' stroke-width='2' stroke-dasharray='6 5' marker-end='url(#fim)'/>
+<text x='760' y='892' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#1689e6' text-anchor='middle' font-style='italic'>código conferido na matriz da turma</text>
+<path d='M1080 798 L1080 1010 L150 1010 L150 940' fill='none' stroke='#1689e6' stroke-width='2' stroke-dasharray='6 5' marker-end='url(#fim)'/>
+<text x='620' y='1032' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#1689e6' text-anchor='middle' font-style='italic'>cada horário "dia-slot" aponta para um slot de um turno</text>
+<rect x='1200' y='860' width='400' height='130' rx='10' fill='#ffffff' stroke='#8aa0b6' stroke-width='1.5'/>
+<text x='1220' y='890' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#1d2733' text-anchor='start'>Legenda</text>
+<rect x='1220' y='904' width='22' height='14' fill='#0b3d84'/>
+<text x='1252' y='916' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#5b6875' text-anchor='start'>configuração do curso (todos os semestres)</text>
+<rect x='1220' y='930' width='22' height='14' fill='#3fae74'/>
+<text x='1252' y='942' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#5b6875' text-anchor='start'>dados de cada semestre</text>
+<path d='M1220 966 L1244 966' stroke='#1689e6' stroke-width='2' stroke-dasharray='6 5'/>
+<text x='1252' y='970' font-family='Arial, Helvetica, sans-serif' font-size='13' font-weight='normal' fill='#5b6875' text-anchor='start'>relação calculada pelas regras do domínio</text>
+</svg>

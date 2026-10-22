@@ -1,0 +1,83 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1640 770' width='1640' height='770'>
+<title>Ofertar – fluxo de trabalho da coordenação</title>
+<defs>
+  <marker id='fim' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='#8aa0b6'/></marker>
+  <marker id='ini' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='#8aa0b6'/></marker>
+</defs>
+<rect width='1640' height='770' fill='#ffffff'/>
+<text x='40' y='46' font-family='Arial, Helvetica, sans-serif' font-size='17' font-weight='bold' fill='#5b6875' text-anchor='start'>FLUXO DE TRABALHO DA COORDENAÇÃO</text>
+<text x='40' y='92' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='bold' fill='#1689e6' text-anchor='start'>Uma vez por curso</text>
+<rect x='40' y='114' width='180' height='52' rx='26' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='130' y='146' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='bold' fill='#ffffff' text-anchor='middle'>Início</text>
+<rect x='260' y='97' width='230' height='86' rx='14' fill='#eef5fc' stroke='#0b3d84' stroke-width='2'/>
+<text x='375.0' y='133' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Configurar o curso</text>
+<text x='375.0' y='157.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>habilitações, horários,</text>
+<text x='375.0' y='174.82' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>regras de CH</text>
+<rect x='530' y='97' width='230' height='86' rx='14' fill='#eef5fc' stroke='#0b3d84' stroke-width='2'/>
+<text x='645.0' y='133' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Importar matrizes</text>
+<text x='645.0' y='157.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>planilha CSV</text>
+<text x='645.0' y='174.82' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>(modelo no app)</text>
+<rect x='800' y='97' width='230' height='86' rx='14' fill='#eef5fc' stroke='#0b3d84' stroke-width='2'/>
+<text x='915.0' y='133' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Cadastrar docentes</text>
+<text x='915.0' y='157.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>vínculo e situação</text>
+<path d='M220 140 L258 140' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M490 140 L528 140' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M760 140 L798 140' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M30 210 L1610 210' stroke='#8aa0b6' stroke-width='1.5' stroke-dasharray='4 6'/>
+<text x='40' y='246' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='bold' fill='#3fae74' text-anchor='start'>A cada semestre</text>
+<path d='M915 183 L915 230 L155 230 L155 270' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<rect x='40' y='272' width='230' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='155.0' y='308' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Criar semestre</text>
+<text x='155.0' y='332.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>a partir do mesmo período</text>
+<text x='155.0' y='349.82' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>do ano anterior</text>
+<rect x='310' y='272' width='230' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='425.0' y='308' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Montar a grade</text>
+<text x='425.0' y='332.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>componente, turmas,</text>
+<text x='425.0' y='349.82' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>docentes e horários</text>
+<rect x='580' y='272' width='230' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='695.0' y='308' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Conferência</text>
+<text x='695.0' y='332.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>automática, a cada</text>
+<text x='695.0' y='349.82' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>alteração</text>
+<path d='M940 255.0 L1040.0 315 L940 375.0 L840.0 315Z' fill='#fdf3e2' stroke='#e9a23b' stroke-width='2'/>
+<text x='940' y='311.0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#1d2733' text-anchor='middle'>Há</text>
+<text x='940' y='330.8' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#1d2733' text-anchor='middle'>pendências?</text>
+<rect x='1110' y='272' width='230' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='1225.0' y='308' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Corrigir</text>
+<text x='1225.0' y='332.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>ou marcar como "ciente"</text>
+<path d='M270 315 L308 315' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M540 315 L578 315' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M810 315 L838 315' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M1040 315 L1108 315' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<text x='1072' y='304' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='normal' fill='#5b6875' text-anchor='middle' font-style='italic'>sim</text>
+<path d='M1225 272 L1225 240 L425 240 L425 270' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M940 375 L940 450' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<text x='966' y='418' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='normal' fill='#5b6875' text-anchor='middle' font-style='italic'>não</text>
+<rect x='825' y='452' width='230' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='940.0' y='488' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Salvar versão</text>
+<text x='940.0' y='512.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>cópia do que será enviado</text>
+<rect x='1110' y='452' width='230' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='1225.0' y='488' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Gerar documentos</text>
+<text x='1225.0' y='512.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>Word, CSV e memorando</text>
+<rect x='1380' y='452' width='220' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='1490.0' y='488' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Enviar</text>
+<text x='1490.0' y='512.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>discentes, docentes,</text>
+<text x='1490.0' y='529.82' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>departamento, colegiados</text>
+<path d='M1055 495 L1108 495' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M1340 495 L1378 495' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<path d='M1490 580.0 L1590.0 640 L1490 700.0 L1390.0 640Z' fill='#fdf3e2' stroke='#e9a23b' stroke-width='2'/>
+<text x='1490' y='636.0' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#1d2733' text-anchor='middle'>Houve</text>
+<text x='1490' y='655.8' font-family='Arial, Helvetica, sans-serif' font-size='15' font-weight='bold' fill='#1d2733' text-anchor='middle'>alterações?</text>
+<path d='M1490 538 L1490 578' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<rect x='1060' y='597' width='270' height='86' rx='14' fill='#e6f6ee' stroke='#3fae74' stroke-width='2'/>
+<text x='1195.0' y='633' font-family='Arial, Helvetica, sans-serif' font-size='16.5' font-weight='bold' fill='#1d2733' text-anchor='middle'>Comparar com a versão</text>
+<text x='1195.0' y='657.0' font-family='Arial, Helvetica, sans-serif' font-size='13.5' font-weight='normal' fill='#5b6875' text-anchor='middle'>lista do que mudou</text>
+<path d='M1390 640 L1332 640' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<text x='1362' y='630' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='normal' fill='#5b6875' text-anchor='middle' font-style='italic'>sim</text>
+<path d='M1060 640 L425 640 L425 360' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<text x='740' y='630' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='normal' fill='#5b6875' text-anchor='middle' font-style='italic'>ajustar a grade e reenviar</text>
+<path d='M1490 700 L1490 726 L1292 726' fill='none' stroke='#8aa0b6' stroke-width='2.5' marker-end='url(#fim)'/>
+<text x='1400' y='716' font-family='Arial, Helvetica, sans-serif' font-size='14' font-weight='normal' fill='#5b6875' text-anchor='middle' font-style='italic'>não</text>
+<rect x='1110' y='700' width='180' height='52' rx='26' fill='#0b3d84' stroke='#0b3d84' stroke-width='0'/>
+<text x='1200' y='732' font-family='Arial, Helvetica, sans-serif' font-size='16' font-weight='bold' fill='#ffffff' text-anchor='middle'>Oferta concluída</text>
+<path d='M30 750' />
+</svg>

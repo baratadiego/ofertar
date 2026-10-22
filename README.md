@@ -85,8 +85,10 @@ src/lib/storage.ts    navegador (localStorage) e arquivo .json
 src/components/       telas
 public/               manifesto, ícones e service worker (app instalável e offline)
 scripts/              importador de ofertas em .docx
-docs/                 manual (PDF e fonte HTML), telas e marca (docs/marca: logo em SVG)
+docs/                 manual (PDF e fonte HTML), telas, marca (logo em SVG) e diagramas de arquitetura
 ```
+
+Arquitetura, modelo de dados e fluxo de trabalho, com diagramas: [`docs/arquitetura.md`](docs/arquitetura.md).
 
 Publicação: veja [`docs/publicar.md`](docs/publicar.md).
 
