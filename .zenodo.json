@@ -21,7 +21,7 @@
     "software educacional"
   ],
   "related_identifiers": [
-    { "identifier": "https://ofertar.vercel.app", "relation": "isDocumentedBy", "resource_type": "software" }
+    { "identifier": "https://ofertar-cyan.vercel.app", "relation": "isDocumentedBy", "resource_type": "software" }
   ],
   "version": "1.0.0"
 }

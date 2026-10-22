@@ -4,7 +4,7 @@ O Ofertar é um site estático: `pnpm build` gera a pasta `dist/` com `index.htm
 
 ## Vercel (endereço oficial)
 
-O projeto `ofertar` na Vercel está ligado a este repositório. Cada envio para a branch `main` gera uma nova publicação em https://ofertar.vercel.app.
+O projeto `ofertar` na Vercel está ligado a este repositório. Cada envio para a branch `main` gera uma nova publicação em https://ofertar-cyan.vercel.app.
 
 Configuração usada:
 

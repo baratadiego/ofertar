@@ -6,7 +6,7 @@ O Ofertar ajuda a coordenação a montar a oferta de disciplinas do semestre: a 
 
 Desenvolvido no **Laboratório Multidisciplinar de Ensino (LAMEN)** da **Universidade Federal do Amapá (UNIFAP)**.
 
-- **Usar agora:** https://ofertar.vercel.app (instalável no computador e funciona offline)
+- **Usar agora:** https://ofertar-cyan.vercel.app (instalável no computador e funciona offline)
 - **Manual de uso (PDF, com telas):** [`docs/Manual-Ofertar.pdf`](docs/Manual-Ofertar.pdf)
 - **Usar sem internet, num arquivo só:** [`app/index.html`](app/index.html) (baixe e abra no Chrome ou no Edge)
 
@@ -34,7 +34,7 @@ Os dados ficam **no navegador e no arquivo `.json`** que você salvar. Nada da o
 
 ## Como usar
 
-1. Abra https://ofertar.vercel.app no Chrome ou no Edge (ou o arquivo `app/index.html`).
+1. Abra https://ofertar-cyan.vercel.app no Chrome ou no Edge (ou o arquivo `app/index.html`).
 2. Escolha **Explorar um curso de exemplo** para conhecer, ou **Começar um curso novo**.
 3. Em **Configurações**, cadastre habilitações, horários, matrizes (CSV) e turmas do semestre. Na aba **Docentes**, cadastre os docentes.
 4. Monte a **Grade** de cada turma e acompanhe **Pendências**.
