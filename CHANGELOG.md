@@ -9,7 +9,7 @@ Primeira versão pública.
 - Aba Docentes com CH de graduação e pós-graduação, função e redução PAID.
 - Matrizes por habilitação e ano de ingresso, com importação por CSV e modelo para baixar.
 - Versões da oferta com comparação.
-- Documentos: Word para discentes e docentes, quadro de ofertas para o Departamento (horário no padrão Sigaa), CSV de carga horária e rascunho de memorando por colegiado.
+- Documentos: Word para discentes e docentes, quadro de ofertas para o Departamento (horário no padrão Sigaa), CSV de carga horária e rascunho de memorando por colegiado. Os documentos em Word trazem rodapé com a versão do app, a data e a hora da geração e a numeração de páginas.
 - Novo semestre reaproveitando o mesmo período do ano anterior.
 - Cores dos quadros por ano de ingresso; tema claro e escuro; menu e painéis recolhíveis.
 - App instalável (PWA) e de uso offline; também funciona como arquivo único aberto do computador.

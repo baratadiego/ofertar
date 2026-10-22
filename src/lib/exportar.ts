@@ -1,8 +1,22 @@
 import {
-  AlignmentType, Header, BorderStyle, Document, Packer, PageOrientation, Paragraph, ShadingType, Table, TableCell, TableRow,
+  AlignmentType, Footer, Header, PageNumber, BorderStyle, Document, Packer, PageOrientation, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, VerticalAlign, VerticalMergeType, WidthType,
 } from 'docx'
 import type { Aula, Projeto, Semestre } from './types'
+import { version as VERSAO } from '../../package.json'
+
+/** Rodapé comum: identifica o app, a data e hora da geração e a página. */
+function rodape(s: Semestre) {
+  const agora = new Date()
+  const data = agora.toLocaleDateString('pt-BR') + ' às ' + agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+  const r = (text: string) => new TextRun({ text, size: 14, color: '888888', font: FONT })
+  return { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [
+    r(`Gerado pelo Ofertar ${VERSAO} em ${data} · Oferta ${s.rotulo} · Página `),
+    new TextRun({ children: [PageNumber.CURRENT], size: 14, color: '888888', font: FONT }),
+    r(' de '),
+    new TextRun({ children: [PageNumber.TOTAL_PAGES], size: 14, color: '888888', font: FONT }),
+  ] })] }) }
+}
 import { chAlocada, componentesDeOutrosColegiados, corTurma, distribuicaoCH, habilitacaoDoComponente, horarioSigaaPorDia, norm, minimoEnsino, habil, nomeDocente, periodoDaTurma, resumoHorarios, rotuloStatus, turmaCurta, type StatusCH } from './model'
 
 const FONT = 'Arial'
@@ -106,7 +120,8 @@ export async function gerarDocx(proj: Projeto, s: Semestre, tipo: 'discente' | '
   const doc = new Document({
     styles: { default: { document: { run: { font: FONT, size: 16 } } } },
     sections: [{
-      properties: { page: { size: { orientation: PageOrientation.LANDSCAPE }, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 360 } } },
+      properties: { page: { size: { orientation: PageOrientation.LANDSCAPE }, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 360, footer: 360 } } },
+      footers: rodape(s),
       headers: { default: new Header({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [
         t(c.instituicao.toUpperCase(), { bold: true, size: 17, color: '777777' }),
         ...(c.unidade ? [t('   |   ', { size: 17, color: 'AAAAAA' }), t(c.unidade.toUpperCase(), { size: 17, color: '777777' })] : []),
@@ -210,7 +225,8 @@ export async function gerarQuadroDepartamento(proj: Projeto, s: Semestre): Promi
   const doc = new Document({
     styles: { default: { document: { run: { font: FONT, size: 17 } } } },
     sections: [{
-      properties: { page: { size: { orientation: PageOrientation.LANDSCAPE }, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 300 } } },
+      properties: { page: { size: { orientation: PageOrientation.LANDSCAPE }, margin: { top: 720, bottom: 720, left: 720, right: 720, header: 300, footer: 360 } } },
+      footers: rodape(s),
       headers: { default: new Header({ children: qd.cabecalho.split('\n').map(l => new Paragraph({ alignment: AlignmentType.CENTER, children: [t(l.trim(), { bold: true, size: 18 })] })) }) },
       children: blocos,
     }],
