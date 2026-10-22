@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ofertar">
+  <title>Ofertar</title>
+  <rect width="512" height="512" rx="116" fill="#1c5b48"/>
+  <rect x="84" y="128" width="344" height="300" rx="48" fill="#f6f2e8"/>
+  <path d="M84 176a48 48 0 0 1 48-48h248a48 48 0 0 1 48 48v42H84z" fill="#e9a23b"/>
+  <path d="M176 318l58 58 104-112" fill="none" stroke="#1c5b48" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

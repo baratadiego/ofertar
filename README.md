@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/marca/ofertar-logo.svg" alt="Ofertar" width="420"></p>
+
 # Ofertar
 
 **Organizador de ofertas de disciplinas para coordenações de curso.**
@@ -81,7 +83,7 @@ src/lib/storage.ts    navegador (localStorage) e arquivo .json
 src/components/       telas
 public/               manifesto, ícones e service worker (app instalável e offline)
 scripts/              importador de ofertas em .docx
-docs/                 manual (PDF e fonte HTML) e telas
+docs/                 manual (PDF e fonte HTML), telas e marca (docs/marca: logo em SVG)
 ```
 
 Publicação: veja [`docs/publicar.md`](docs/publicar.md).

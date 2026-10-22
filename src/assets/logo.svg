@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ofertar">
+  <title>Ofertar</title>
+  <rect width="512" height="512" rx="116" fill="#1c5b48"/>
+  <rect x="92" y="132" width="328" height="292" rx="40" fill="#f6f2e8"/>
+  <path d="M92 172a40 40 0 0 1 40-40h248a40 40 0 0 1 40 40v38H92z" fill="#e9a23b"/>
+  <rect x="168" y="92" width="24" height="76" rx="12" fill="#f6f2e8" stroke="#1c5b48" stroke-width="10"/>
+  <rect x="320" y="92" width="24" height="76" rx="12" fill="#f6f2e8" stroke="#1c5b48" stroke-width="10"/>
+  <rect x="124" y="238" width="88" height="70" rx="16" fill="#cfe8d8"/>
+  <rect x="212" y="238" width="88" height="70" rx="16" fill="#d6e2f5"/>
+  <rect x="300" y="238" width="88" height="70" rx="16" fill="#f6dcc4"/>
+  <rect x="124" y="326" width="88" height="70" rx="16" fill="#cfe8d8"/>
+  <rect x="212" y="326" width="88" height="70" rx="16" fill="#f6dcc4"/>
+  <rect x="300" y="326" width="88" height="70" rx="16" fill="#1c5b48"/>
+  <path d="M324 362l14 14 28-30" fill="none" stroke="#f6f2e8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
