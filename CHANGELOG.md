@@ -4,6 +4,7 @@
 
 - DOI do Zenodo no README (selo), no `CITATION.cff`, no manual e na tela de abertura do app.
 - Manual e citações atualizados.
+- Documentação da arquitetura em camadas, do modelo de dados e do fluxo de trabalho, com diagramas (`docs/arquitetura.md`).
 
 ## 1.0.0 — outubro de 2026
 
