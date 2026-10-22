@@ -16,6 +16,11 @@ authors:
     affiliation: "Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá (UNIFAP)"
     orcid: "https://orcid.org/0000-0002-1640-5630"
 version: 1.0.0
+doi: 10.5281/zenodo.23567683
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23567683
+    description: "Versão 1.0.0 arquivada no Zenodo"
 date-released: 2026-10-22
 license: MIT
 repository-code: "https://github.com/baratadiego/ofertar"

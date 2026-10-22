@@ -2,6 +2,8 @@
 
 # Ofertar
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23567683.svg)](https://doi.org/10.5281/zenodo.23567683) [![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue.svg)](LICENSE)
+
 **Organizador de ofertas de disciplinas para coordenações de curso.**
 
 O Ofertar ajuda a coordenação a montar a oferta de disciplinas do semestre: a grade de cada turma, a distribuição da carga horária docente, a conferência com a matriz curricular e os documentos que precisam ser enviados (discentes, docentes, Departamento e outros colegiados).
@@ -95,9 +97,9 @@ ORCID: [0000-0002-1640-5630](https://orcid.org/0000-0002-1640-5630) · Lattes: [
 
 ## Como citar
 
-BARATA, Francisco Diego Barros. **Ofertar: organizador de ofertas de disciplinas para coordenações de curso**. Versão 1.0.0. Macapá: Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá, 2026. Software. Disponível em: https://github.com/baratadiego/ofertar.
+BARATA, Francisco Diego Barros. **Ofertar: organizador de ofertas de disciplinas para coordenações de curso**. Versão 1.0.0. Macapá: Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá, 2026. Software. DOI: 10.5281/zenodo.23567683. Disponível em: https://doi.org/10.5281/zenodo.23567683.
 
-Os metadados de citação estão em [`CITATION.cff`](CITATION.cff); o GitHub mostra o botão "Cite this repository". Após o arquivamento no Zenodo, use o DOI da versão.
+Arquivado no Zenodo: [10.5281/zenodo.23567683](https://doi.org/10.5281/zenodo.23567683). Os metadados de citação estão em [`CITATION.cff`](CITATION.cff); o GitHub mostra o botão "Cite this repository".
 
 ## Segurança e privacidade
 

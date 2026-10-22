@@ -283,7 +283,7 @@ function BoasVindas({ atual, onContinuar, onAbrir, onExemplo, onBranco }: { atua
         <button className="opcao" onClick={onBranco}><b>Começar um curso novo</b><span>Configure horários, habilitações e matrizes do seu curso.{atual ? ' Substitui o projeto aberto (salve antes).' : ''}</span></button>
       </div>
       <p style={{ fontSize: 13 }}>Os dados ficam neste navegador e no arquivo que você salvar. Nada é enviado para servidores.</p>
-      <p style={{ fontSize: 12.5, borderTop: '1px solid var(--line)', paddingTop: 12 }}>Ofertar · desenvolvido no Laboratório Multidisciplinar de Ensino (LAMEN) da Universidade Federal do Amapá · Francisco Diego Barros Barata · software livre (licença MIT) · <a href="https://github.com/baratadiego/ofertar" target="_blank" rel="noreferrer" style={{ color: 'inherit' }}>código e manual</a></p>
+      <p style={{ fontSize: 12.5, borderTop: '1px solid var(--line)', paddingTop: 12 }}>Ofertar · desenvolvido no Laboratório Multidisciplinar de Ensino (LAMEN) da Universidade Federal do Amapá · Francisco Diego Barros Barata · software livre (licença MIT) · <a href="https://doi.org/10.5281/zenodo.23567683" target="_blank" rel="noreferrer" style={{ color: 'inherit' }}>DOI 10.5281/zenodo.23567683</a> · <a href="https://github.com/baratadiego/ofertar" target="_blank" rel="noreferrer" style={{ color: 'inherit' }}>código e manual</a></p>
     </div>
   )
 }
