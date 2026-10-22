@@ -86,6 +86,11 @@ docs/                 manual (PDF e fonte HTML) e telas
 
 Publicação: veja [`docs/publicar.md`](docs/publicar.md).
 
+## Autor
+
+**Francisco Diego Barros Barata** — Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá (UNIFAP)
+ORCID: [0000-0002-1640-5630](https://orcid.org/0000-0002-1640-5630) · Lattes: [1702223554115381](http://lattes.cnpq.br/1702223554115381)
+
 ## Como citar
 
 BARATA, Francisco Diego Barros. **Ofertar: organizador de ofertas de disciplinas para coordenações de curso**. Versão 1.0.0. Macapá: Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá, 2026. Software. Disponível em: https://github.com/baratadiego/ofertar.

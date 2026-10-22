@@ -5,10 +5,11 @@
   "creators": [
     {
       "name": "Barata, Francisco Diego Barros",
-      "affiliation": "Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá (UNIFAP)"
+      "affiliation": "Laboratório Multidisciplinar de Ensino (LAMEN), Universidade Federal do Amapá (UNIFAP)",
+      "orcid": "0000-0002-1640-5630"
     }
   ],
-  "license": "MIT",
+  "license": "mit",
   "language": "por",
   "keywords": [
     "gestão acadêmica",
@@ -20,8 +21,6 @@
     "ensino superior",
     "software educacional"
   ],
-  "related_identifiers": [
-    { "identifier": "https://ofertar-cyan.vercel.app", "relation": "isDocumentedBy", "resource_type": "software" }
-  ],
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "notes": "Aplicação disponível em https://ofertar-cyan.vercel.app. Currículo Lattes do autor: http://lattes.cnpq.br/1702223554115381"
 }
