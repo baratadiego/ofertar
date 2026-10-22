@@ -14,3 +14,4 @@ Primeira versão pública.
 - Cores dos quadros por ano de ingresso; tema claro e escuro; menu e painéis recolhíveis.
 - App instalável (PWA) e de uso offline; também funciona como arquivo único aberto do computador.
 - Script para importar ofertas antigas em `.docx`.
+- Segurança: cabeçalhos HTTP restritivos (CSP, anti-iframe), conferência da estrutura do arquivo `.json` ao abrir e política de segurança (`SECURITY.md`).

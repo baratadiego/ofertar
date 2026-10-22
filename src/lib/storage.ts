@@ -19,7 +19,12 @@ export function limparLocal() {
 
 export function validarProjeto(x: unknown): x is Projeto {
   const p = x as Projeto
-  return !!p && typeof p === 'object' && !!p.config && Array.isArray(p.docentes) && Array.isArray(p.semestres)
+  if (!p || typeof p !== 'object' || !p.config || typeof p.config !== 'object') return false
+  if (!Array.isArray(p.docentes) || !Array.isArray(p.semestres)) return false
+  const c = p.config
+  if (!Array.isArray(c.habilitacoes) || !Array.isArray(c.turnos) || !Array.isArray(c.dias) || !Array.isArray(c.matrizes)) return false
+  if (!p.docentes.every(d => d && typeof d.id === 'string' && typeof d.nome === 'string')) return false
+  return p.semestres.every(s => s && typeof s.id === 'string' && Array.isArray(s.turmas) && Array.isArray(s.aulas))
 }
 
 // ---- arquivo (.json) ----

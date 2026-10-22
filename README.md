@@ -97,6 +97,10 @@ BARATA, Francisco Diego Barros. **Ofertar: organizador de ofertas de disciplinas
 
 Os metadados de citação estão em [`CITATION.cff`](CITATION.cff); o GitHub mostra o botão "Cite this repository". Após o arquivamento no Zenodo, use o DOI da versão.
 
+## Segurança e privacidade
+
+O app não tem servidor: os dados ficam no navegador e no arquivo `.json` de quem usa. Detalhes e como relatar problemas: [`SECURITY.md`](SECURITY.md).
+
 ## Licença
 
 [MIT](LICENSE). É permitido usar, copiar, modificar e redistribuir, mantendo o aviso de direitos autorais.

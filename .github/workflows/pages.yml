@@ -1,7 +1,7 @@
 name: Publicar no GitHub Pages
+# Alternativa à Vercel. Para usar: Settings > Pages > Source: GitHub Actions,
+# depois rode este workflow manualmente (aba Actions).
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
