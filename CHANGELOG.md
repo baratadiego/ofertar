@@ -5,6 +5,7 @@
 - Docentes: o botão **Horário** abre uma janela com os dados do docente (vínculo, situação, CH na graduação e na pós, total, prevista, aulas por semana e dias), a lista de componentes com turmas, CH e horário, e o quadro da semana com choques destacados.
 - O horário também está disponível para docentes de outros colegiados e para afastados que ainda têm componentes alocados.
 - **Ver na grade** leva ao componente; **Copiar resumo** copia a lista de componentes e horários para enviar ao docente.
+- Grade: arraste um bloco de aulas para mudar o dia ou o horário. O bloco de aulas seguidas se move junto; se não couber no turno, aparece um aviso; Desfazer volta à posição anterior.
 - Manual atualizado.
 
 ## 1.0.1 — outubro de 2026

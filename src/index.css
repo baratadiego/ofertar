@@ -133,6 +133,9 @@ table.grade { border-collapse: collapse; width: 100%; min-width: 760px; table-la
 
 .blk { border-radius: 4px; padding: 3px 6px 3px 8px; height: 100%; min-height: 38px; background: hsl(var(--h) var(--cell-s) var(--cell-l)); border-left: 3px solid hsl(var(--h) 50% var(--cell-b)); overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
 .blk + .blk { margin-top: 2px; }
+.blk[draggable="true"] { cursor: grab; }
+.blk[draggable="true"]:active { cursor: grabbing; }
+.grade td.alvo { outline: 2px dashed var(--accent); outline-offset: -2px; background: var(--accent-weak); }
 .blk .cod { font: 500 10.5px var(--f-mono); color: var(--muted); }
 .blk .nm { font: 600 12.5px/1.15 var(--f-cond); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .blk .dc { font: 12px/1.15 var(--f-cond); color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

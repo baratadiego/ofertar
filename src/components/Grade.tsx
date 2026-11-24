@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Aula, Problema, Projeto, Semestre } from '../lib/types'
-import { aulasEsperadas, corDocente, corTurma, habil, matrizDaTurma, nomeDocente, periodoDaTurma, rotuloTurma, sugereModuloLivre, turmaCurta } from '../lib/model'
+import { aulasEsperadas, corDocente, corTurma, habil, matrizDaTurma, moverBloco, rotuloCelula, nomeDocente, periodoDaTurma, rotuloTurma, sugereModuloLivre, turmaCurta } from '../lib/model'
 
 export type Preset = { turmaId?: string; horario?: string; codigo?: string; nome?: string; ch?: number }
 
@@ -14,9 +14,13 @@ interface TabelaProps {
   mostrarTurma?: boolean
   cor?: { forte: string; clara: string }
   onCelula?: (cel: string, aulasNaCelula: Aula[]) => void
+  /** quando presente, os blocos podem ser arrastados para outra célula */
+  onMover?: (aulaId: string, de: string, para: string) => void
 }
 
-export function GradeTabela({ proj, aulas, turnos, conflitos, selecionada, pintando, mostrarTurma, cor, onCelula }: TabelaProps) {
+export function GradeTabela({ proj, aulas, turnos, conflitos, selecionada, pintando, mostrarTurma, cor, onCelula, onMover }: TabelaProps) {
+  const [alvo, setAlvo] = useState<string | null>(null)
+  const [arrastando, setArrastando] = useState(false)
   const thCor = cor ? { background: cor.forte, color: '#fff', borderBottomColor: cor.forte } : undefined
   const horaCor = cor ? { background: `color-mix(in srgb, ${cor.forte} 13%, var(--surface))`, color: 'var(--ink)', fontWeight: 600 } : undefined
   const sepCor = cor ? { background: `color-mix(in srgb, ${cor.forte} 22%, var(--surface))`, color: 'var(--ink)' } : undefined
@@ -47,16 +51,25 @@ export function GradeTabela({ proj, aulas, turnos, conflitos, selecionada, pinta
                       const cel = `${d}-${sl.id}`
                       const as = porCel.get(cel) ?? []
                       const acima = i > 0 ? (porCel.get(`${d}-${tn.slots[i - 1].id}`) ?? []) : []
-                      const cls = [as.length ? '' : 'vazia', pintando ? 'pintavel' : '', conflitos?.has(cel) ? 'conflito' : ''].join(' ')
+                      const cls = [as.length ? '' : 'vazia', pintando ? 'pintavel' : '', conflitos?.has(cel) ? 'conflito' : '', alvo === cel ? 'alvo' : ''].join(' ')
                       return (
-                        <td key={cel} className={cls} onClick={onCelula ? () => onCelula(cel, as) : undefined} title={as.map(a => `${a.codigo} ${a.nome}`).join('\n') || undefined}>
+                        <td key={cel} className={cls} onClick={onCelula ? () => onCelula(cel, as) : undefined} title={as.map(a => `${a.codigo} ${a.nome}`).join('\n') || undefined}
+                          onDragOver={onMover && arrastando ? e => { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; if (alvo !== cel) setAlvo(cel) } : undefined}
+                          onDragLeave={onMover ? () => setAlvo(x => (x === cel ? null : x)) : undefined}
+                          onDrop={onMover ? e => {
+                            e.preventDefault(); setAlvo(null); setArrastando(false)
+                            try { const { aulaId, de } = JSON.parse(e.dataTransfer.getData('application/x-ofertar') || '{}'); if (aulaId && de && de !== cel) onMover(aulaId, de, cel) } catch { /* nada a mover */ }
+                          } : undefined}>
                           {as.map(a => {
                             const cont = acima.includes(a) && !intervalo
                             const d0 = a.alocacao[0]?.docente
                             const h = d0 ? corDocente(d0) : 0
                             const docs = a.alocacao.map(x => nomeDocente(docMap.get(x.docente))).join(' + ')
                             return (
-                              <div key={a.id} className={`blk ${a.alocacao.length ? '' : 'indef'} ${cont ? 'cont' : ''} ${selecionada === a.id ? 'sel' : ''} ${selecionada && selecionada !== a.id ? 'esmaecido' : ''}`} style={{ ['--h' as string]: h }}>
+                              <div key={a.id} className={`blk ${a.alocacao.length ? '' : 'indef'} ${cont ? 'cont' : ''} ${selecionada === a.id ? 'sel' : ''} ${selecionada && selecionada !== a.id ? 'esmaecido' : ''}`} style={{ ['--h' as string]: h }}
+                                draggable={!!onMover} title={onMover ? 'Arraste para mudar o dia ou o horário' : undefined}
+                                onDragStart={onMover ? e => { e.stopPropagation(); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('application/x-ofertar', JSON.stringify({ aulaId: a.id, de: cel })); setArrastando(true) } : undefined}
+                                onDragEnd={onMover ? () => { setArrastando(false); setAlvo(null) } : undefined}>
                                 <span className="cod">{a.codigo}{mostrarTurma ? ' · ' + a.turmas.map(x => turmaCurta(c, x)).join('+') : ''}</span>
                                 <span className="nm">{a.nome}</span>
                                 <span className="dc">{docs || 'A definir'}</span>
@@ -101,6 +114,9 @@ export function GradeView({ proj, sem, mudarSem, problemas, turmaSel, setTurmaSe
   const usados = useMemo(() => c.turnos.filter(tn => aulasTurma.some(a => a.horarios.some(h => tn.slots.some(s => h.endsWith('-' + s.id))))).map(t => t.id), [aulasTurma, c.turnos])
   const [turnos, setTurnos] = useState<string[]>([])
   const [novaTurma, setNovaTurma] = useState<{ ingresso: number; habilitacao: string } | null>(null)
+  const [aviso, setAviso] = useState<string | null>(null)
+  const [movido, setMovido] = useState<string | null>(null)
+  useEffect(() => { if (!movido) return; const t = setTimeout(() => setMovido(null), 4000); return () => clearTimeout(t) }, [movido])
   const lerPref = (k: string) => { try { return localStorage.getItem('ofertas-curso:' + k) === '1' } catch { return false } }
   const gravarPref = (k: string, v: boolean) => { try { localStorage.setItem('ofertas-curso:' + k, v ? '1' : '0') } catch { /* ignore */ } }
   const [recT, setRecTRaw] = useState(() => lerPref('recolher-turmas'))
@@ -249,9 +265,19 @@ export function GradeView({ proj, sem, mudarSem, problemas, turmaSel, setTurmaSe
             <button className="btn sm" onClick={() => setAulaSel(null)}>Concluir (Esc)</button>
           </div>
         ) : (
-          <div className="dica muted" style={{ background: 'var(--surface-2)' }}>Escolha um componente à direita para marcar horários, ou clique numa célula vazia para incluir um componente nela.</div>
+          <div className="dica muted" style={{ background: 'var(--surface-2)' }}>{movido ? <span>Movido: <b>{movido}</b>. Use Desfazer para voltar.</span> : 'Escolha um componente à direita para marcar horários, clique numa célula vazia para incluir um componente nela, ou arraste um bloco para mudar o dia ou o horário.'}</div>
         )}
+        {aviso && <div className="dica" style={{ background: 'var(--warn-bg)' }}>{aviso}<button className="btn sm" onClick={() => setAviso(null)}>OK</button></div>}
         <GradeTabela
+          onMover={(aulaId, de, para) => {
+            const a = sem.aulas.find(x => x.id === aulaId)
+            if (!a) return
+            const r = moverBloco(c, a.horarios, de, para)
+            if ('erro' in r) { setAviso(r.erro); return }
+            setAviso(null)
+            mudarSem(s => { const x = s.aulas.find(y => y.id === aulaId); if (x) x.horarios = r.horarios })
+            setMovido(`${a.codigo} ${a.nome}: ${rotuloCelula(c, de)} → ${rotuloCelula(c, para)}`)
+          }}
           cor={corTurma(c, turma)} proj={proj} aulas={aulasTurma} turnos={turnosVis} conflitos={conflitos} selecionada={aulaSel} pintando={!!sel}
           onCelula={(cel, as) => {
             if (sel) return alternarHorario(sel.id, cel)

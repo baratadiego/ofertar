@@ -36,6 +36,33 @@ export function todosSlots(c: Config) {
   return c.turnos.flatMap(t => t.slots.map(s => ({ ...s, turno: t.id })))
 }
 
+/**
+ * Move o bloco de aulas contínuas de um componente: o bloco que contém a célula `de`
+ * (mesmo dia, mesmo turno, horários seguidos) é deslocado para que `de` caia em `para`.
+ * Devolve os novos horários, ou uma mensagem quando o bloco não cabe no destino.
+ */
+export function moverBloco(c: Config, horarios: string[], de: string, para: string): { horarios: string[] } | { erro: string } {
+  const slots = todosSlots(c)
+  const idx = (id: string) => slots.findIndex(s => s.id === id)
+  const [d0, s0] = de.split('-'); const [d1, s1] = para.split('-')
+  const i0 = idx(s0), i1 = idx(s1)
+  if (i0 < 0 || i1 < 0 || !horarios.includes(de)) return { erro: 'Horário de origem inválido.' }
+  const turno0 = slots[i0].turno
+  const doDia = new Set(horarios.filter(h => h.startsWith(d0 + '-')).map(h => idx(h.split('-')[1])))
+  let ini = i0, fim = i0
+  while (doDia.has(ini - 1) && slots[ini - 1].turno === turno0) ini--
+  while (doDia.has(fim + 1) && slots[fim + 1].turno === turno0) fim++
+  const delta = i1 - i0
+  const novos: string[] = []
+  for (let i = ini; i <= fim; i++) {
+    const j = i + delta
+    if (j < 0 || j >= slots.length || slots[j].turno !== slots[i1].turno) return { erro: `O bloco tem ${fim - ini + 1} aulas e não cabe nesse turno a partir desse horário.` }
+    novos.push(`${d1}-${slots[j].id}`)
+  }
+  const antigos = new Set(Array.from({ length: fim - ini + 1 }, (_, k) => `${d0}-${slots[ini + k].id}`))
+  return { horarios: [...new Set([...horarios.filter(h => !antigos.has(h)), ...novos])] }
+}
+
 export function rotuloCelula(c: Config, cel: string) {
   const [d, sl] = cel.split('-')
   const s = todosSlots(c).find(x => x.id === sl)
