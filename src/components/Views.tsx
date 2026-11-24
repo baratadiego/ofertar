@@ -9,13 +9,103 @@ import { GradeTabela, type Preset } from './Grade'
 type MudarSem = (fn: (s: Semestre, p: Projeto) => void) => void
 type Mudar = (fn: (p: Projeto) => void) => void
 
+// Horário de um docente (do curso ou de outro colegiado) em um modal
+function HorarioDocenteModal({ proj, sem, docente: d, onFechar, onEditar, irPara }: { proj: Projeto; sem: Semestre; docente: Docente; onFechar: () => void; onEditar: () => void; irPara: (turmaId: string, aulaId?: string) => void }) {
+  const c = proj.config
+  const [copiado, setCopiado] = useState(false)
+  const itens = useMemo(() => sem.aulas.filter(a => a.alocacao.some(x => x.docente === d.id))
+    .map(a => ({ aula: a, ch: a.alocacao.filter(x => x.docente === d.id).reduce((t, x) => t + (+x.ch || 0), 0) }))
+    .sort((a, b) => a.aula.codigo.localeCompare(b.aula.codigo)), [sem.aulas, d.id])
+  const aulas = itens.map(i => i.aula)
+  const naGrade = aulas.filter(a => !a.moduloLivre && a.horarios.length)
+  const turnos = c.turnos.filter(tn => naGrade.some(a => a.horarios.some(h => tn.slots.some(sl => h.endsWith('-' + sl.id))))).map(t => t.id)
+  // choques: a mesma célula ocupada por dois componentes diferentes do docente
+  const conflitos = useMemo(() => {
+    const vistos = new Map<string, number>()
+    for (const a of naGrade) for (const h of new Set(a.horarios)) vistos.set(h, (vistos.get(h) ?? 0) + 1)
+    return new Set([...vistos].filter(([, n]) => n > 1).map(([h]) => h))
+  }, [naGrade])
+  const slotsSemana = new Set(naGrade.flatMap(a => a.horarios)).size
+  const dias = c.dias.filter((_, i) => naGrade.some(a => a.horarios.some(h => h.startsWith(i + '-'))))
+  const graduacao = itens.reduce((t, i) => t + i.ch, 0)
+  const externo = d.vinculo === 'externo'
+  const pos = sem.chPos?.[d.id] ?? 0
+  const prevista = sem.chPrevista?.[d.id] ?? 0
+  const total = graduacao + (externo ? 0 : pos)
+  const colegiados = [...new Set(aulas.map(a => a.colegiado).filter(Boolean))]
+  const nome = `${d.tratamento} ${d.nome}`.trim()
+
+  const resumo = [
+    `${nome} — horário ${sem.rotulo} (${c.sigla || c.curso})`,
+    ...itens.map(({ aula: a, ch }) => `${a.codigo} ${a.nome} · ${a.turmas.map(x => turmaCurta(c, x)).join(' + ')} · ${ch}h · ${a.moduloLivre ? 'módulo livre' : resumoHorarios(c, a.horarios) || 'sem horário'}`),
+    `Total no curso: ${graduacao}h`,
+  ].join('\n')
+  const copiar = async () => { try { await navigator.clipboard.writeText(resumo); setCopiado(true); setTimeout(() => setCopiado(false), 1800) } catch { /* sem permissão de área de transferência */ } }
+
+  const chip = (rot: string, val: React.ReactNode, cor?: string) => (
+    <div style={{ border: '1px solid var(--line)', borderRadius: 8, padding: '8px 12px', minWidth: 110 }}>
+      <div className="muted" style={{ fontSize: 12 }}>{rot}</div>
+      <div style={{ fontWeight: 600, fontSize: 16, color: cor }}>{val}</div>
+    </div>
+  )
+
+  return (
+    <Modal titulo={`Horário · ${nome}`} onClose={onFechar} largura={1080}
+      rodape={<>
+        <button className="btn ghost" onClick={onEditar}>Editar docente</button>
+        <span style={{ display: 'flex', gap: 8 }}>
+          <button className="btn" onClick={copiar} title="Copia a lista de componentes e horários, para enviar ao docente">{copiado ? 'Copiado ✓' : 'Copiar resumo'}</button>
+          <button className="btn pri" onClick={onFechar}>Fechar</button>
+        </span>
+      </>}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
+        <span className="status" style={externo ? { background: 'var(--info-bg)', color: 'var(--info)' } : undefined}>{externo ? 'Outro colegiado' : 'Docente do curso'}</span>
+        {d.situacao !== 'ativo' && <span className="status err">{d.situacao === 'afastado' ? 'Afastado' : 'Dispensado'}</span>}
+        {externo && colegiados.length > 0 && <span className="muted" style={{ fontSize: 13 }}>{colegiados.join(' · ')}</span>}
+        {d.obs && !colegiados.includes(d.obs) && <span className="muted" style={{ fontSize: 13 }}>{d.obs}</span>}
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+        {chip(externo ? 'CH neste curso' : 'Graduação', `${graduacao}h`)}
+        {!externo && chip('Pós-graduação', pos ? `${pos}h` : '—')}
+        {!externo && chip('Total de ensino', `${total}h`, d.situacao === 'ativo' && !sem.reducaoPaid?.[d.id] && total < minimoEnsino(c) ? 'var(--warn)' : undefined)}
+        {!externo && chip('Prevista (PAID)', prevista ? `${prevista}h` : '—', prevista && prevista !== total ? 'var(--warn)' : undefined)}
+        {chip('Aulas na grade', `${slotsSemana} h/a por semana`)}
+        {chip('Dias', dias.length ? dias.join(', ') : '—')}
+      </div>
+      {conflitos.size > 0 && <div className="status err" style={{ alignSelf: 'flex-start' }}>Choque de horário em {conflitos.size} {conflitos.size === 1 ? 'horário' : 'horários'} (destacados no quadro)</div>}
+
+      <div className="scroll-x">
+        <table className="lt">
+          <thead><tr><th>Código</th><th>Componente</th><th>Turmas</th><th className="r">CH</th><th>Horário</th><th></th></tr></thead>
+          <tbody>
+            {itens.map(({ aula: a, ch }) => (
+              <tr key={a.id}>
+                <td className="mono muted">{a.codigo}</td>
+                <td>{a.nome}{a.alocacao.length > 1 && <div className="muted" style={{ fontSize: 12 }}>com {a.alocacao.filter(x => x.docente !== d.id).map(x => nomeDocente(proj.docentes.find(y => y.id === x.docente))).join(', ')}</div>}</td>
+                <td style={{ fontSize: 13 }}>{a.turmas.map(x => turmaCurta(c, x)).join(' + ')}</td>
+                <td className="r num">{ch}h</td>
+                <td style={{ fontSize: 13 }}>{a.moduloLivre ? <span className="muted">Módulo livre</span> : resumoHorarios(c, a.horarios) || <span className="status warn">Sem horário</span>}</td>
+                <td className="r"><button className="btn sm ghost" onClick={() => irPara(a.turmas[0], a.id)}>Ver na grade</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {turnos.length > 0
+        ? <GradeTabela proj={proj} aulas={naGrade} turnos={turnos} conflitos={conflitos} mostrarTurma />
+        : <p className="muted" style={{ margin: 0 }}>Nenhum componente deste docente tem horário na grade{aulas.some(a => a.moduloLivre) ? ' (só módulo livre)' : ''}.</p>}
+    </Modal>
+  )
+}
+
 // =============== DOCENTES ===============
 const CLS_STATUS: Record<StatusCH, string> = { confere: 'ok', diverge: 'warn', 'sem-prevista': 'mute', 'funcao-sem-componente': 'warn', indisponivel: 'err' }
 
 export function DocentesView({ proj, sem, mudar, mudarSem, irPara }: { proj: Projeto; sem: Semestre; mudar: Mudar; mudarSem: MudarSem; irPara: (turmaId: string, aulaId?: string) => void }) {
   const c = proj.config
   const [filtro, setFiltro] = useState<'todos' | 'diverge' | 'sem-prevista'>('todos')
-  const [aberto, setAberto] = useState<string | null>(null)
+  const [horarioDe, setHorarioDe] = useState<Docente | null>(null)
   const [editando, setEditando] = useState<Docente | null>(null)
   const dist = useMemo(() => distribuicaoCH(proj, sem), [proj, sem])
   const linhas = dist.comAulas.filter(l => filtro === 'todos' || l.status === filtro)
@@ -51,7 +141,7 @@ export function DocentesView({ proj, sem, mudar, mudarSem, irPara }: { proj: Pro
             <thead><tr><th>Docente</th><th>Graduação (CH · código · turma)</th><th className="r">Pós</th><th className="r">Total ensino</th><th>Função</th><th className="r">Prevista</th><th>Situação</th><th></th></tr></thead>
             <tbody>
               {linhas.length === 0 && <tr><td colSpan={8} className="muted">Nenhum docente neste filtro.</td></tr>}
-              {linhas.map(l => [
+              {linhas.map(l => (
                 <tr key={l.docente.id}>
                   <td style={{ verticalAlign: 'top', minWidth: 190 }}><b style={{ fontWeight: 600 }}>{l.docente.tratamento} {l.docente.nome}</b>{l.docente.obs && <div className="muted" style={{ fontSize: 12 }}>{l.docente.obs}</div>}
                     <label className="check" style={{ fontSize: 12, marginTop: 4 }} title="Redução de carga pela Res. PAID art. 50 §1 — dispensa o mínimo de ensino">
@@ -74,16 +164,11 @@ export function DocentesView({ proj, sem, mudar, mudarSem, irPara }: { proj: Pro
                   <td className="r" style={{ verticalAlign: 'top' }}>{inpPrev(l.docente.id, l.docente.nome, l.prevista)}</td>
                   <td style={{ verticalAlign: 'top' }}>{l.abaixoMinimo && <div style={{ marginBottom: 4 }}><span className="status warn">Abaixo de {minimoEnsino(c)}h</span></div>}{l.reducao && <div style={{ marginBottom: 4 }}><span className="status" style={{ background: 'var(--info-bg)', color: 'var(--info)' }}>Redução PAID</span></div>}<span title={l.status === 'sem-prevista' ? 'A CH prevista no PAID não foi informada — preencha a coluna Prevista para conferir' : undefined} className={`status ${CLS_STATUS[l.status] === 'mute' ? '' : CLS_STATUS[l.status]}`} style={CLS_STATUS[l.status] === 'mute' ? { background: 'var(--surface-2)', color: 'var(--muted)' } : undefined}>{rotuloStatus(l)}</span></td>
                   <td style={{ whiteSpace: 'nowrap', verticalAlign: 'top', textAlign: 'right' }}>
-                    {l.itens.some(i => !i.aula.moduloLivre && i.aula.horarios.length) && <button className="btn sm ghost" onClick={() => setAberto(aberto === l.docente.id ? null : l.docente.id)}>{aberto === l.docente.id ? 'Fechar' : 'Horário'}</button>}
+                    {l.itens.length > 0 && <button className="btn sm ghost" onClick={() => setHorarioDe(l.docente)}>Horário</button>}
                     <button className="btn sm ghost" onClick={() => setEditando(structuredClone(l.docente))}>Editar</button>
                   </td>
-                </tr>,
-                aberto === l.docente.id && (
-                  <tr key={l.docente.id + '-g'}><td colSpan={8} style={{ background: 'var(--surface-2)' }}>
-                    <GradeTabela proj={proj} aulas={l.itens.map(i => i.aula)} turnos={c.turnos.filter(tn => l.itens.some(i => i.aula.horarios.some(h => tn.slots.some(s => h.endsWith('-' + s.id))))).map(t => t.id)} mostrarTurma />
-                  </td></tr>
-                ),
-              ])}
+                </tr>
+              ))}
             </tbody>
             <tfoot><tr><td colSpan={2} className="r muted">Total do curso</td><td className="r num muted">{dist.totalPos ? dist.totalPos + 'h' : '—'}</td><td className="r num" style={{ fontWeight: 600, fontSize: 16 }}>{dist.total}h</td><td colSpan={4} className="muted">{dist.confere} conferem · {dist.diverge} divergem · {dist.semPrevista} sem prevista</td></tr></tfoot>
           </table>
@@ -112,7 +197,7 @@ export function DocentesView({ proj, sem, mudar, mudarSem, irPara }: { proj: Pro
               <tr key={l.docente.id}>
                 <td><b style={{ fontWeight: 600 }}>{l.docente.nome}</b><div className="muted" style={{ fontSize: 12 }}>{l.docente.obs || (l.docente.situacao === 'afastado' ? 'Afastado' : 'Dispensado')}</div></td>
                 <td>{l.itens.length ? <span className="status err">Alocado em {l.itens.map(i => i.aula.codigo).join(', ')}</span> : <span className="status" style={{ background: 'var(--surface-2)', color: 'var(--muted)' }}>{l.docente.situacao}</span>}</td>
-                <td className="r"><button className="btn sm ghost" onClick={() => setEditando(structuredClone(l.docente))}>Editar</button></td>
+                <td className="r" style={{ whiteSpace: 'nowrap' }}>{l.itens.length > 0 && <button className="btn sm ghost" onClick={() => setHorarioDe(l.docente)}>Horário</button>}<button className="btn sm ghost" onClick={() => setEditando(structuredClone(l.docente))}>Editar</button></td>
               </tr>
             ))}
           </tbody></table>
@@ -127,12 +212,13 @@ export function DocentesView({ proj, sem, mudar, mudarSem, irPara }: { proj: Pro
             <tr key={d.id}>
               <td><b style={{ fontWeight: 600 }}>{d.tratamento} {d.nome}</b>{d.obs && <div className="muted" style={{ fontSize: 12 }}>{d.obs}</div>}</td>
               <td style={{ fontSize: 13 }}>{aulas.map(a => <div key={a.id}><span className="mono muted">{a.codigo}</span> {a.nome} <span className="muted">· {a.turmas.map(x => turmaCurta(c, x)).join(' + ')}{a.colegiado ? ' · ' + a.colegiado : ''}</span></div>)}</td>
-              <td className="r"><button className="btn sm ghost" onClick={() => setEditando(structuredClone(d))}>Editar</button></td>
+              <td className="r" style={{ whiteSpace: 'nowrap' }}><button className="btn sm ghost" onClick={() => setHorarioDe(d)}>Horário</button><button className="btn sm ghost" onClick={() => setEditando(structuredClone(d))}>Editar</button></td>
             </tr>
           ))}
         </tbody></table>
       </section>
 
+      {horarioDe && <HorarioDocenteModal proj={proj} sem={sem} docente={horarioDe} onFechar={() => setHorarioDe(null)} onEditar={() => { setEditando(structuredClone(horarioDe)); setHorarioDe(null) }} irPara={(t, a) => { setHorarioDe(null); irPara(t, a) }} />}
       {editando && <DocenteModal docente={editando} existe={proj.docentes.some(d => d.id === editando.id)} emUso={proj.semestres.some(s => s.aulas.some(a => a.alocacao.some(x => x.docente === editando.id)))}
         onFechar={() => setEditando(null)}
         onSalvar={d => { mudar(p => { const i = p.docentes.findIndex(x => x.id === d.id); if (i >= 0) p.docentes[i] = d; else p.docentes.push(d) }); setEditando(null) }}

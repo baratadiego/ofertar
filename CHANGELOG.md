@@ -1,5 +1,12 @@
 # Histórico de versões
 
+## 1.1.0 — novembro de 2026
+
+- Docentes: o botão **Horário** abre uma janela com os dados do docente (vínculo, situação, CH na graduação e na pós, total, prevista, aulas por semana e dias), a lista de componentes com turmas, CH e horário, e o quadro da semana com choques destacados.
+- O horário também está disponível para docentes de outros colegiados e para afastados que ainda têm componentes alocados.
+- **Ver na grade** leva ao componente; **Copiar resumo** copia a lista de componentes e horários para enviar ao docente.
+- Manual atualizado.
+
 ## 1.0.1 — outubro de 2026
 
 - DOI do Zenodo no README (selo), no `CITATION.cff`, no manual e na tela de abertura do app.
